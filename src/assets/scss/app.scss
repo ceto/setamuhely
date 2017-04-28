@@ -50,9 +50,8 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import  'components/extends';
-@import  'components/dateboxlister';
-@import  'components/datebox';
-@import  'components/facts';
+@import  'components/components';
+@import  'layout/layout';
+@import  'pages/pages';
 
 
