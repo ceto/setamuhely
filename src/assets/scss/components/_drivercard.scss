@@ -1,0 +1,44 @@
+.dclist {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  > li {
+    display: block;
+    margin:0 0 .75rem 0;
+  }
+}
+.drivercard {
+  @include clearfix();
+  //padding:.75rem 0;
+  background-color: scale-color($light-gray, $lightness: 50%);
+  border:1px solid $light-gray;
+  &:hover {
+    .drivercard__photo {
+      border-color:$secondary-color;
+    }
+  }
+}
+
+.drivercard__photo {
+  border-left: .75rem solid $primary-color;
+  display: block;
+  float:left;
+  max-width: 30%;
+  margin-right: .75rem;
+  img {
+    display: block;
+  }
+}
+.drivercard__name {
+  font-size: 1rem;
+  margin:1.25rem 0 .125em;
+  font-family: $body-font-family;
+  a {
+    color:inherit;
+  }
+}
+.drivercard__titulus {
+  font-size: .875rem;
+  margin:0;
+  font-style: italic;
+}

@@ -1,3 +1,23 @@
+.walk__present {
+  color: $primary-color;
+  margin:0;
+  span {
+    font-style: italic;
+    font-weight: $global-weight-normal;
+    font-size: .666em;
+    color:$body-font-color;
+  }
+}
+.walk__title {
+  //color:$primary-color;
+
+}
+
+.walk__subtitle {
+  font-family: $body-font-family;
+  font-weight: $global-weight-normal;
+}
+
 .walk__banner {
   @include clearfix();
 }
@@ -11,8 +31,8 @@
   @include breakpoint('large') {
     width:60%;
   }
-  @include breakpoint('xxlarge') {
-    //width:60%;
+  @include breakpoint('xxxlarge') {
+    width:50%;
   }
 
 }
@@ -25,8 +45,8 @@
   @include breakpoint('large') {
     width:40%;
   }
-  @include breakpoint('xxlarge') {
-    //width:40%;
+  @include breakpoint('xxxlarge') {
+    width:50%;
   }
 }
 

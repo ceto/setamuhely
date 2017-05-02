@@ -8,3 +8,45 @@
   //font-family: $header-font-family;
   letter-spacing: .05em
 }
+.reveal {
+  box-shadow: 0 0 2rem 0 rgba(#000,.5);
+}
+
+.reveal__header{
+ background-color: $primary-color;
+ margin-left:-$global-padding*2;
+ margin-right:-$global-padding*2;
+ margin-top:-$global-padding;
+ padding:$global-padding*2;
+ color:$white;
+}
+
+ // Blockquotes
+  blockquote {
+    // margin: 0 0 $paragraph-margin-bottom;
+    // padding: $blockquote-padding;
+    // border-#{$global-left}: $blockquote-border;
+    padding-left: 15%;
+    text-align: right;
+
+    &, p {
+      font-size: 1.25rem;
+      //font-family: $header-font-family;
+      //font-style: italic;
+      //font-weight: $global-weight-bold;
+      // line-height: $paragraph-lineheight;
+      // color: $blockquote-color;
+
+    }
+  }
+
+    // Citations
+  cite {
+    // display: block;
+    // font-size: $cite-font-size;
+    // color: $cite-color;
+
+    // &:before {
+    //   content: $cite-pseudo-content;
+    // }
+  }
