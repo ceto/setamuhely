@@ -10,6 +10,7 @@
 .drivercard {
   @include clearfix();
   //padding:.75rem 0;
+  max-width: 30rem;
   background-color: scale-color($light-gray, $lightness: 50%);
   border:1px solid $light-gray;
   &:hover {
@@ -23,7 +24,7 @@
   border-left: .75rem solid $primary-color;
   display: block;
   float:left;
-  max-width: 30%;
+  max-width: 28%;
   margin-right: .75rem;
   img {
     display: block;

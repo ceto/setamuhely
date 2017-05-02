@@ -20,39 +20,45 @@
 
 .walk__banner {
   @include clearfix();
+  background-color: $light-gray;
+  //color:$white;
+  @include breakpoint('medium') {
+    background-image: linear-gradient(180deg, $alert-color 6.25rem, transparent 6.25rem );
+  }
 }
 
 .walk__banner__one {
-  box-shadow: inset 0 0 3rem 0  rgba(#000,.95);
   @include breakpoint('medium') {
     float:left;
     width:50%;
+    padding-right: .9375rem;
   }
-  @include breakpoint('large') {
-    width:60%;
-  }
-  @include breakpoint('xxxlarge') {
-    width:50%;
-  }
+  // @include breakpoint('large') {
+  //   width:60%;
+  // }
+  // @include breakpoint('xxxlarge') {
+  //   width:50%;
+  // }
 
 }
 .walk__banner__two {
-  background-color: $light-gray;
   @include breakpoint('medium') {
-    float:right;
+    float:left;
     width:50%;
+    max-width: $global-width/2;
   }
-  @include breakpoint('large') {
-    width:40%;
-  }
-  @include breakpoint('xxxlarge') {
-    width:50%;
-  }
+  // @include breakpoint('large') {
+  //   width:40%;
+  // }
+  // @include breakpoint('xxxlarge') {
+  //   width:50%;
+  // }
 }
 
 .walk__herofig {
   height: inherit;
   background-color: #000;
+
 }
 
 .walk__herofig img {
