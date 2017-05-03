@@ -1,0 +1,96 @@
+<div class="ps">
+  <div class="row columns">
+    <div class="eventcard">
+
+    </div>
+
+
+      <div class="event">
+        <section class="eventCard__head">
+            <a href="#" class="eventCard__head__date">
+                <% include 'partials/dateBox', type: 'listItem', dateMonth: @item.dateMonth, dateDay: @item.dateDay, weekDay: @item.weekDay, dateTo: @item.dateTo, place: @item.place, finished: @item.finished, url: @item.url %>
+            </a>
+            <a href="<%- @item.url %>" class="eventCard__head__img">
+                <!-- 16x9-es képarány -->
+                <% if @item.img : %>
+                  <img width="320" height="180" src="<%- @item.img %>" alt="<%- @item.title %>">
+                <% else : %>
+                    <img src="http://placehold.it/320x180"
+                    sizes="(min-width: 48em) 30vw , (min-width: 64em) 257px,  80vw"
+                    srcset="http://placehold.it/320x180/3a3a3a 320w, http://placehold.it/480x270/3a3a3a 480w, http://placehold.it/768x432/3a3a3a 768w, http://placehold.it/1024x576/3a3a3a 1024w"
+                    alt="<%- @item.title %>">
+                <% end %>
+
+            </a>
+            <% if @item.offer : %>
+                <div class="eventCard__head__offer">
+                    <a href="#" class="tooltip tooltip--left" href="#">X
+                        <span class="tooltip-content"><%- @item.offer %></span>
+                    </a>
+                </div>
+            <% end %>
+        </section>
+        <section class="eventCard__details">
+            <header>
+                <% if @item.presents : %>
+                    <div class="eventCard__details__presents">
+                        <%- @item.presents %>
+                    </div>
+                <% end %>
+                <h2 class="eventCard__details__title" itemprop="name">
+                    <a href="<%- @item.url %>" itemprop="url" <% if @item.soldOut : %>data-caption="sold out"<% end %>>
+                        <%- @item.title %>
+                    </a>
+                </h2>
+            </header>
+            <% if @item.lead : %>
+                <div class="eventCard__details__description">
+                    <p><%- @item.lead %></p>
+                </div>
+            <% end %>
+        </section>
+        <section class="eventCard__ticketblock">
+            <% if !@item.finished : %>
+                <div class="eventCard__ticketblock__prices">
+                    <% if @item.soldOut : %>
+                        <div class="eventCard__ticketblock__prices__info eventCard__ticketblock__prices__item--info">Minden jegy elkelt</div>
+                    <% else : %>
+                        <% if @item.freeEntry : %>
+                            <div class="eventCard__ticketblock__prices__info eventCard__ticketblock__prices__item--info">Ingyenes</div>
+                        <% else : %>
+                                <div class="eventCard__ticketblock__prices__item">Vacsorával <span>5 500 Ft</span></div>
+                                <div class="eventCard__ticketblock__prices__item">Elővételben <span>2000 Ft</span></div>
+                        <% end %>
+                    <% end %>
+                </div>
+                <div class="eventCard__ticketblock__action">
+                    <% if @item.soldOut : %>
+                        <span class="btn btn--fullWidth btn--cart btn--listItem btn--disabled">Sold out</span>
+                    <% else : %>
+                        <% if @item.freeEntry : %>
+                            <a href="event_single_finished.html" class="btn btn--fullWidth btn--listItem btn--disabled">Részletek</a>
+                        <% else : %>
+                            <a class="btn btn--fullWidth btn--cart btn--listItem" ui-sref="Modal.addToCart">Jegyvásárlás</a>
+                        <% end %>
+                    <% end %>
+                </div>
+            <% else: %>
+                <div class="eventCard__ticketblock__prices">
+                    <div class="eventCard__ticketblock__prices__info eventCard__ticketblock__prices__item--info">A program véget ért</div>
+                </div>
+                <div class="eventCard__ticketblock__action">
+                    <a href="event_single_finished.html" class="btn btn--fullWidth btn--listItem btn--disabled">Részletek</a>
+                </div>
+            <% end %>
+        </section>
+
+    </div>
+
+
+
+
+
+
+  </div>
+</div>
+
