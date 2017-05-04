@@ -1,0 +1,154 @@
+.eventcard {
+  @include clearfix();
+  position: relative;
+  background-color: #fff;
+  margin:1.75rem auto;
+  //border: 1px solid $medium-gray;
+  box-shadow: 0 0 1.5rem 0 rgba(#000,.0875);
+  transition: box-shadow .2s ;
+  &:hover {
+    box-shadow: 0 0 1.5rem 0 rgba(#000,.125);
+  }
+}
+
+.eventcard__peak {
+  @include clearfix();
+  background-color: $primary-color;
+  // @include breakpoint(medium) {
+  //   float:left;
+  //   width: 5.5rem;
+  // }
+  @include breakpoint(medium) {
+    float:left;
+    width: 6rem;
+  }
+  @include breakpoint(large) {
+    width: 19rem;
+  }
+  @include breakpoint(xlarge) {
+    width: 22rem;
+  }
+
+}
+
+.eventcard__date {
+  float: left;
+  max-width: calc(100% - 18rem);
+  @include breakpoint(medium) {
+    max-width: none;
+    width:6rem;
+    left:0;
+  }
+}
+
+
+.eventcard__img {
+  display: block;
+  width:17rem;
+  float:right;
+
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+  @include breakpoint(large) {
+    display: block;
+    width: calc(100% - 6rem);
+    height:inherit;
+    img {
+      object-fit: cover;
+      height:100%;
+      width:100%;
+    }
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.eventcard__body {
+  padding:.75rem;
+  // @include breakpoint(medium) {
+  //   float:left;
+  //   width: calc(100% - 11rem);
+  // }
+  @include breakpoint(medium) {
+    float:left;
+    width: calc(100% - 17rem);
+  }
+  @include breakpoint(large) {
+    width: calc(100% - 30rem);
+    padding:.875rem;
+  }
+  @include breakpoint(xlarge) {
+    width: calc(100% - 33rem);
+    padding:1rem;
+  }
+}
+.eventcard__title {
+  font-size: 1.333rem;
+  margin:0 0 .75em;
+  color:$primary-color;
+  @include breakpoint(xlarge) {
+    font-size: 1.5rem;
+  }
+  a {
+    color:inherit;
+  }
+  small {
+    margin-top: .875em;
+    font-family: $body-font-family;
+    //font-weight: $global-weight-normal;
+    display: block;
+    font-size: .875em;
+    color:$secondary-color;
+
+  }
+
+}
+
+.eventcard__description {
+
+
+  p {
+    margin:0;
+    overflow: hidden;
+    font-size: .875rem;
+    @include breakpoint(medium) {
+      font-size:.75rem;
+      max-height: 3em;
+    }
+    @include breakpoint(large) {
+      font-size: .875rem;
+    }
+  }
+}
+
+.eventcard__tail {
+  padding:.75rem;
+  text-align: center;
+  @include breakpoint(medium) {
+    float:left;
+    width: 11rem;
+  }
+  @include breakpoint(large) {
+    padding:.875rem;
+  }
+  @include breakpoint(xlarge) {
+    padding:1rem;
+  }
+}
+.eventcard__actions {
+  .button {
+    margin-bottom: 0;
+  }
+}
+.eventcard__smallinfo {
+  margin: .75em 0 0 .5em;
+  font-size: .75rem;
+  p {
+    margin:0 0 .25em;
+    line-height: 1.2;
+  }
+}

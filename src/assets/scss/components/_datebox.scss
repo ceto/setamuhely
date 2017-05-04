@@ -6,9 +6,18 @@
   line-height: 1;
   padding: .875em .75em 3.75em;
   width:8.5em;
-  color:#fff;
+  color:$white;
   &:hover {
     background-color: $success-color;
+  }
+}
+.datebox--mini {
+  padding: .875em .666em .75em;
+  width:auto;
+  &:hover {
+    background-color: inherit;
+    color:#fff;
+    //text-shadow: 0 0 3px rgba(#000,.25);
   }
 }
 .datebox__globalinfo {
