@@ -1,1 +1,12 @@
 @import 'ps';
+
+.doubledcols {
+  @include breakpoint(tablet) {
+    columns: 2;
+    column-gap: rem-calc(30);
+  }
+  p {
+    break-inside: avoid;
+  }
+  margin-bottom: $paragraph-margin-bottom;
+}
