@@ -1,0 +1,34 @@
+.topbar {
+  background-color: $white;
+  border-bottom: 1px solid $light-gray;
+  box-shadow: 0 0 1rem 0 rgba(#000, .125);
+}
+.topbar__inner {
+  height:6rem;
+  position: relative;
+}
+.topbar__home {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+}
+.sitelogo {
+  display: block;
+  overflow: hidden;
+  width: 10rem;
+  height: 3.125rem;
+  //background-color: red;
+  white-space: nowrap;
+  text-indent: 200%;
+  background-image: url(../img/sm-logo.svg);
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: auto 100%;
+}
+.topbar__mainnav {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 0;
+}

@@ -1,3 +1,25 @@
+.menu {
+  font-weight: $global-weight-bold;
+  font-size: 1.125rem;
+  //line-height: 1;
+  //font-family: $header-font-family;
+  a {
+    color:inherit;
+    &:hover, &:focus {
+      //text-decoration: underline;
+    }
+  }
+  > li {
+    > a {
+      //text-transform: uppercase;
+    }
+  }
+  .active {
+    a {
+    }
+  }
+}
+
 .label {
   font-variant: small-caps;
 }
