@@ -1,14 +1,18 @@
+.wseries {
+  border-top:1px solid $light-gray;
+}
 .wseries__shorttitle {
-  font-size: 1rem;
-  margin:0 0 .25rem;
+  font-size: .875rem;
+  margin:0 0 .5rem;
 }
 .wseries__title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   @include breakpoint(tablet) {
-    font-size:3rem;
+    font-size:2rem;
   }
 }
 
 .wseries__lead {
-  font-size: 1.5em;
+  //font-size: 1.125rem;
+  //max-width: 50em;
 }

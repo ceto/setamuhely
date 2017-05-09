@@ -1,0 +1,13 @@
+.menu--main {
+  font-size: 1.125rem;
+}
+
+.menu--topsticker {
+  a {
+  }
+  a.active {
+
+    color:$primary-color;
+    border-color:currentColor;
+  }
+}
