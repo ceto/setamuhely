@@ -1,7 +1,9 @@
-<header class="walkhead ps">
+<header class="pagehero">
     <div class="row column">
-        <h1>Légy a valóság turistája!</h1>
-        <p class="walkhead__lead lead">Elviszünk a legszebb épületekhez, szobrokhoz, de megmutatjuk azt is, milyen nehézségekkel küzd ez a gyönyörű város. Ismerd meg közösségformáló, emlékfeldolgozó és kortárs tereket bejáró sétáinkat és buszus túráinkat!</p>
+        <div class="pagehero__content">
+        <h1 class="pagehero__title">Légy a valóság turistája!</h1>
+        <p class="pagehero__lead lead">Elviszünk a legszebb épületekhez, szobrokhoz, de megmutatjuk azt is, milyen nehézségekkel küzd ez a gyönyörű város. Ismerd meg közösségformáló, emlékfeldolgozó és kortárs tereket bejáró sétáinkat és buszus túráinkat!</p>
+        </div>
     </div>
     <div data-sticky-container>
         <nav class="stickynav sticky" data-sticky data-anchor="walkseries" data-margin-top="0" data-sticky-on="small">
@@ -42,14 +44,15 @@
                 </div>
             </div>
         </div>
-        <div class="row column">
-            <a href="#" class="button hollow tiny" data-toggle="sdescr1">Bővebben</a>
-        </div>
         <div class="wseries__items">
-            <div class="row medium-up-2 large-up-3">
-                <div class="column">{{> walkcard}}</div>
-                <div class="column">{{> walkcard}}</div>
-                <div class="column">{{> walkcard}}</div>
+            <div class="row column">
+                <div class="owl-carousel wseries__carousel">
+                    {{> walkcard}}
+                    {{> walkcard}}
+                    {{> walkcard}}
+                    {{> walkcard}}
+                    {{> walkcard}}
+                </div>
             </div>
         </div>
     </section>
@@ -60,7 +63,6 @@
                     <h3 class="wseries__shorttitle wserieslabel">Városkép, Élettér</h3>
                     <h2 class="wseries__title">Hazánk felett az ég</h2>
                     <p class="wseries__lead">Hogyan élünk ma ebben a városban? Fókuszban a város jelene, mely sosem független a múlttól. Mit kezdünk az üresen maradt, versenyképtelen üzemekkel, és milyen jövőt szánunk nekik? Hogyan megyünk el nap mint nap a túl magas padkák, az éjszakára bezárt parkok mellett? Mennyire miénk a város</p>
-                    <a href="#" class="button hollow tiny" data-toggle="sdescr2">Részletek</a>
                 </div>
             </div>
         </header>
@@ -74,12 +76,12 @@
             </div>
         </div>
         <div class="wseries__items">
-            <div class="row medium-up-2 large-up-3">
-                <div class="column">{{> walkcard}}</div>
-                <div class="column">{{> walkcard}}</div>
-                <div class="column">{{> walkcard}}</div>
-                <div class="column">{{> walkcard}}</div>
-                <div class="column">{{> walkcard}}</div>
+            <div class="row column">
+                <div class="owl-carousel wseries__carousel">
+                    {{> walkcard}}
+                    {{> walkcard}}
+                    {{> walkcard}}
+                </div>
             </div>
         </div>
     </section>
@@ -100,14 +102,12 @@
                 </div>
             </div>
         </div>
-        <div class="row column">
-            <a href="#" class="button hollow tiny" data-toggle="sdescr3">Bővebben</a>
-        </div>
         <div class="wseries__items">
-            <div class="row medium-up-2 large-up-3">
-                <div class="column">{{> walkcard}}</div>
-                <div class="column">{{> walkcard}}</div>
-                <div class="column">{{> walkcard}}</div>
+            <div class="row column">
+                <div class="owl-carousel wseries__carousel">
+                    {{> walkcard}}
+                    {{> walkcard}}
+                </div>
             </div>
         </div>
     </section>

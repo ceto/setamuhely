@@ -1,0 +1,46 @@
+.pagehero {
+  position: relative;
+  color:$white;
+  padding:8rem 0 4rem 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../img/nyilvantartanak.jpg);
+  background-color: $alert-color;
+  background-blend-mode: multiply;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left:0;top:0;
+    width:100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(#000, 0) 25%, rgba(#000, .25) 100%);
+  }
+  @include breakpoint(large) {
+    padding-top:16vw;
+    padding-bottom: 4vw;
+  }
+}
+.pagehero--narrow {
+  padding:2rem 0 1rem 0;
+  @include breakpoint(large) {
+    padding-top:4vw;
+    padding-bottom: 2vw;
+  }
+}
+.pagehero__content {
+  position: relative;
+  text-shadow: 0 0 .125rem rgba(#000,.5);
+}
+
+.pagehero__title {
+  // display: inline-block;
+  // background-color: $primary-color;
+  // padding:.125em .25em;
+  text-transform: uppercase;
+}
+.pagehero__lead {
+  max-width: 35em;
+  font-size: 1.333rem;
+}

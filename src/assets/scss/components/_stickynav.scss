@@ -3,8 +3,8 @@
 
   &.is-stuck {
     background-color: $white;
-    border-bottom: 1px solid $light-gray;
     box-shadow: 0 0 1rem 0 rgba(#000, .125);
+    color:$dark-gray;
   }
 }
 
