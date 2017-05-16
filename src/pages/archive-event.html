@@ -1,11 +1,10 @@
-
-<div class="eventlist">
-<header class="ps ps--narrow">
+<header class="ps ps--nobottom">
     <div class="row column">
-        <div class="">
-        <h1 class="">Sétanaptár</h1>
+        <a data-open="eventfilterreveal" href="#" class="button small secondary hollow float-right">Szűrés és keresés</a>
+        <h1 class="">Sétaidőpontok</h1>
     </div>
 </header>
+<div class="eventlist ps ps--notop ">
     <div class="row columns">
         {{> eventcard}}
         {{> eventcard2}}
@@ -16,3 +15,93 @@
         {{> eventcard2}}
     </div>
 </div>
+<aside id="eventfilterreveal" class="reveal reveal--side full" data-reveal>
+    <header class="reveal__header">
+        <h4>Találatok szűkítése</h4>
+    </header>
+    <fieldset class="">
+        <legend>Séta téma</legend>
+        <select name="a" id="">
+            <option value="1">Összes séta</option>
+            <option value="1">Politikai múlt</option>
+            <option value="1">Kisebségek, közösségek</option>
+            <option value="1">Gender</option>
+            <option value="1">Gazdaságtörténet</option>
+        </select>
+    </fieldset>
+    <fieldset class="">
+        <legend>Mikor sétálnál</legend>
+        <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Hétvége és ünnepnap</label><br>
+        <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Hétköznap</label><br>
+        <input type="radio" name="pokemon" checked value="Red" id="pokemonRed"><label for="pokemonRed">Mindegy</label>
+    </fieldset>
+    <fieldset class="">
+        <legend>Extra kívánalmak</legend>
+        <input id="checkbox1" type="checkbox"><label for="checkbox1">Buszos</label><br>
+        <input id="checkbox2" type="checkbox"><label for="checkbox2">Kutyabarát</label><br>
+        <input id="checkbox3" type="checkbox"><label for="checkbox3">Akadálymetes</label>
+    </fieldset>
+    <fieldset class="">
+        <button class="button success expanded" data-close aria-label="Close modal" type="button" value="Submit">Bezár</button>
+    </fieldset>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+    </button>
+</aside>
+    <div class="reveal" id="addtocartModal" data-reveal>
+        <header class="reveal__header">
+            <h6>Választott sétád</h6>
+            <h2>Ortodox zsidók Pesten</h2>
+            <p class="lead">2017. szeptember 15. csütörtök - 17:30</p>
+        </header>
+        <!-- <h5>Az alábbi jegyeket kérem</h5> -->
+        <form id="ticketform" action="#">
+            <ul class="ticketlist">
+                <li class="ticket" id="ticket-01">
+                    <div class="ticket__namewrap">
+                        <label class="ticket__name" for="conference-2017-1-ticket-01">
+                            Diák/Nyugdíjas
+                        </label>
+                    </div>
+                    <div class="ticket__pricequantitywrap">
+                        <div class="ticket__pricequantity">
+                            <div class="ticket__price">
+                                <span class="ticket__price__costs">2 500 Ft</span>
+                            </div>
+                            <div class="ticket__quantity ">
+                                <input min="0" pattern="^[1-9]\d*$" autocomplete="off" class="ticket__quantityfield" aria-describedby="ticket__description-01" id="conference-2017-1-ticket-01" name="registration[release_ids][01]" placeholder="0" type="number">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ticket" id="ticket-02">
+                    <div class="ticket__namewrap">
+                        <label class="ticket__name" for="conference-2017-1-ticket-02">
+                            Normál/Felnőtt
+                        </label>
+                    </div>
+                    <div class="ticket__pricequantitywrap">
+                        <div class="ticket__pricequantity">
+                            <div class="ticket__price">
+                                <span class="ticket__price__costs">3 500 Ft</span>
+                            </div>
+                            <div class="ticket__quantity ">
+                                <input min="0" pattern="^[1-9]\d*$" autocomplete="off" class="ticket__quantityfield" aria-describedby="ticket__description-02" id="conference-2017-1-ticket-02" name="registration[release_ids][02]" placeholder="0" type="number">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="formactions">
+                <div class="formactions__action">
+                    <button class="button large alert" type="submit" value="Submit">Tovább</button>
+                </div>
+                <div class="formactions__branding">
+                    <p class="normaltext"> </p>
+                </div>
+            </div>
+        </form>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>

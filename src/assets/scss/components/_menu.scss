@@ -11,3 +11,50 @@
     border-color:currentColor;
   }
 }
+
+
+
+.scrollmenu {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+  white-space: nowrap;
+  font-weight: $global-weight-bold;
+  line-height: 1;
+  font-size: .875rem;
+
+  > li {
+    margin:0;
+    padding:0;
+    display:inline-block;
+    > a {
+      color: inherit;
+      display: block;
+      padding: .333em rem-calc(map-get($grid-column-gutter,small)/2) 0;
+
+      &:hover {
+        color: $black;
+      }
+      &.active {
+        color:$primary-color;
+      }
+
+      @include breakpoint(medium) {
+        padding: .333em rem-calc(map-get($grid-column-gutter,medium)/2) 0;
+      }
+
+      @include breakpoint(large) {
+        padding: .333em rem-calc(map-get($grid-column-gutter,large)/2) 0;
+      }
+
+
+
+    }
+  }
+  @include breakpoint(large) {
+    font-size: 1.125rem;
+  }
+
+
+
+}

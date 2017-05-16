@@ -21,7 +21,16 @@
 .reveal {
   box-shadow: 0 0 2rem 0 rgba(#000,.5);
 }
+.full.reveal--side {
+  width: rem-calc(320);
+  max-width: 80%;
+  margin-right: 0;
+  margin-left: auto;
+  height:100%;
 
+  right:0;
+  left:auto !important;
+}
 .reveal__header{
  background-color: $primary-color;
  margin-left:-$global-padding*2;
@@ -29,7 +38,12 @@
  margin-top:-$global-padding;
  padding:$global-padding*2;
  color:$white;
+ .reveal--side &{
+    background-color: $dark-gray;
+ }
 }
+
+
 
  // Blockquotes
   blockquote {

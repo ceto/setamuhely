@@ -2,7 +2,7 @@
 
 }
 .wseries {
-  border-top:1px solid $light-gray;
+  //border-top:1px solid $light-gray;
 }
 .wseries__shorttitle {
   font-size: .75rem;
@@ -44,7 +44,7 @@
   }
 }
 
-.eventlist {
+.eventlist, .walkseries {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center top;
