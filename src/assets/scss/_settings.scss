@@ -346,11 +346,11 @@ $dropdown-sizes: (
 // -----------------
 
 $dropdownmenu-arrows: true;
-$dropdownmenu-arrow-color: $anchor-color;
+$dropdownmenu-arrow-color: $dark-gray;
 $dropdownmenu-arrow-size: 6px;
-$dropdownmenu-min-width: 200px;
+$dropdownmenu-min-width: rem-calc(220);
 $dropdownmenu-background: $white;
-$dropdownmenu-border: 1px solid $medium-gray;
+$dropdownmenu-border: 1px solid $light-gray;
 
 // 19. Forms
 // ---------
@@ -415,7 +415,7 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 0.75rem 1rem .333rem;
+$menu-item-padding: 1.25rem 1rem .875rem;
 $menu-item-color-active: get-color(alert);
 $menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;

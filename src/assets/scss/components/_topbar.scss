@@ -4,8 +4,9 @@
   box-shadow: 0 0 1rem 0 rgba(#000, .125);
 }
 .topbar__inner {
-  height:6rem;
+  height:5rem;
   position: relative;
+  z-index: 1;
 }
 .topbar__home {
   position: absolute;
@@ -16,8 +17,8 @@
 .sitelogo {
   display: block;
   overflow: hidden;
-  width: 10rem;
-  height: 3.125rem;
+  width: 9.5rem;
+  height: 3rem;
   //background-color: red;
   white-space: nowrap;
   text-indent: 200%;
