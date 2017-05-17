@@ -1,3 +1,17 @@
+fieldset {
+  margin-bottom: 1rem;
+}
+legend {
+  font-family: $header-font-family;
+  font-weight: $global-weight-bold;
+  font-size: .875rem;
+}
+
+.off-canvas {
+  &.is-open {
+    box-shadow: 0 0 2rem 0 rgba(#000,.5);
+  }
+}
 .menu {
   font-weight: $global-weight-bold;
   a {
@@ -6,7 +20,7 @@
 }
 .is-dropdown-submenu {
   font-size: .875rem;
-  box-shadow: 0 1rem 2rem -1rem rgba(#000,.25);
+  box-shadow: 0 0 0 100vw rgba(#000,.5);
   padding: 1rem 0 .75rem;
   > li {
     > a {
