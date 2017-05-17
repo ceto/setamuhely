@@ -244,7 +244,7 @@ $breadcrumbs-item-slash: true;
 // 11. Button
 // ----------
 
-$button-padding: 0.875em 1em .5em;
+$button-padding: .666em 1em .666em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
@@ -415,7 +415,7 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 1.25rem 1rem .875rem;
+$menu-item-padding: 1rem 1rem 1rem;
 $menu-item-color-active: get-color(alert);
 $menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;

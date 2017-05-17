@@ -9,6 +9,7 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
+import ghPages  from 'gulp-gh-pages';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -31,6 +32,18 @@ gulp.task('build',
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
   gulp.series('build', server, watch));
+
+gulp.task('deploy',
+  gulp.series(ghdeploy, clearpublish));
+
+function ghdeploy() {
+  return gulp.src([PATHS.dist + '/**/*', 'CNAME'])
+    .pipe(ghPages());
+}
+
+function clearpublish(done) {
+  rimraf('.publish', done);
+}
 
 // Delete the "dist" folder
 // This happens every time a build starts

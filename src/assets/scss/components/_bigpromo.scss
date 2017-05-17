@@ -1,0 +1,19 @@
+.bigpromo {
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+.bigpromo__inner {
+  width:80%;
+  height:0;
+  padding-bottom:45%;
+}
+
+.bigpromoitem__content {
+  position: absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  padding:5% 5%;
+  color:$white;
+}

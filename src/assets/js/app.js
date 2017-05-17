@@ -1,6 +1,29 @@
 $(document).foundation();
 
 $(document).ready(function(){
+  $('.bigpromo__carousel').owlCarousel({
+    margin:1,
+    dots:false,
+    //autoplay:true,
+    autoplayHoverPause: true,
+    loop:true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:1,
+        },
+        768:{
+            items:1,
+        },
+        1024:{
+            items:1,
+            nav:true
+        }
+    }
+  });
 
   $('.wseries__carousel').owlCarousel({
     margin:20,
