@@ -249,22 +249,18 @@
     <span aria-hidden="true">&times;</span>
     </button>
 </aside>
-<section class="wseries ps">
-    <header class="wseries__head">
-        <div class="row">
-            <div class="columns large-8">
-                <h2 class="wseries__title">Ajánljuk még figyelmedbe&hellip;</h2>
-                <p class="wseries__lead">Kapcsolódó sétáink, témában hasonló. A szerő bisztege nem norlan, de atyagos, mert a szigás csombukáját táratják. A meg nem masányos pallomokat nem norlan billéznie. Ócska a csihlen tátalasznak radkodnia kell a ferjelet szaplatos jegyezőjét, vetőjét, háráját </p>
-            </div>
+<section class="heroplus ps--light">
+    <div class="heroplus__inner">
+        <div class="heroplus__gridder">
+            <h3 class="heroplus__title">Ajánljuk még figyelmedbe&hellip;</h3>
         </div>
-    </header>
-    <div class="wseries__items">
-        <div class="row column">
-            <div class="owl-carousel wseries__carousel">
-                {{> walkcard}}
-                {{> walkcard}}
-                {{> walkcard}}
-            </div>
+
+        <div class="promoted">
+            <ul class="promoted__list">
+                <li>{{> promocard }}</li>
+                <li>{{> promocard2 }}</li>
+                <li>{{> promocard3 }}</li>
+            </ul>
         </div>
     </div>
 </section>

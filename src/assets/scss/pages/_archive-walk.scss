@@ -1,53 +1,11 @@
 .walkseries {
 
 }
-.wseries {
-  //border-top:1px solid $light-gray;
-}
-.wseries__shorttitle {
-  font-size: .75rem;
-  margin:0 .5em 0 0;
-  transform:translateY(-.25em);
-  @include breakpoint(tablet) {
-    font-size: .875rem;
-    transform:translateY(-.5em);
-  }
 
-}
-.wseries__title {
-  display: inline-block;
-  font-size: 1.25rem;
-  margin:0 0 .25em 0;
-  @include breakpoint(tablet) {
-    font-size:2.125rem;
-  }
-}
-
-.wseries__lead {
-  clear:both;
-  //font-size: 1.125rem;
-  //max-width: 50em;
-  margin-bottom:2rem;
-}
-
-.wseries__items {
-  overflow: hidden;
-  padding-right:15%;
-  @include breakpoint(medium) {
-    padding-right:30%;
-  }
-  @include breakpoint(tablet) {
-    padding-right:15%;
-  }
-  @include breakpoint(large) {
-    padding-right:0;
-  }
-}
-
-.eventlist, .walkseries {
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center top;
-  background-image: url(../img/firkaalja.png);
-  background-attachment: fixed;
-}
+// .eventlist {
+//   background-repeat: no-repeat;
+//   background-size: 100% auto;
+//   background-position: center top;
+//   background-image: url(../img/firkaalja.png);
+//   background-attachment: fixed;
+// }

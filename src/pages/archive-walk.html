@@ -1,10 +1,11 @@
-<header class="pagehero apagehero--narrow">
-    <div class="row column">
-        <div class="pagehero__content">
-        <h2 class="pagehero__subtext">Tematikus séták Budapesten</h2>
-        <h1 class="pagehero__maintext">Légy a valóság turistája!</h1>
-        <p class="pagehero__lead lead">Ismerd meg közösségformáló, emlékfeldolgozó és kortárs tereket bejáró sétáinkat és buszus túráinkat!</p>
-        </div>
+<header class="hero">
+    <figure class="hero__bg">
+        <img src="{{root}}/assets/img/bicaj.jpg" alt="Szecessziós divatséta">
+    </figure>
+    <div class="hero__content">
+        <h1 class="hero__subtext">Tematikus séták Budapesten</h1>
+        <p class="hero__maintext">Légy a valóság turistája!</p>
+        <p class="hero__lead">Ismerd meg közösségformáló, emlékfeldolgozó és kortárs tereket bejáró sétáinkat és buszus túráinkat!</p>
     </div>
 </header>
 <div data-sticky-container>
@@ -48,15 +49,13 @@
             </div>
         </div>
         <div class="wseries__items">
-            <div class="row column">
-                <div class="owl-carousel wseries__carousel">
-                    {{> walkcard}}
-                    {{> walkcard}}
-                    {{> walkcard}}
-                    {{> walkcard}}
-                    {{> walkcard}}
-                </div>
-            </div>
+            <ul class="wseries__list">
+                <li>{{> walkcard}}</li>
+                <li>{{> walkcard}}</li>
+                <li>{{> walkcard}}</li>
+                <li>{{> walkcard}}</li>
+                <li>{{> walkcard}}</li>
+            </ul>
         </div>
     </section>
     <section id="second" data-magellan-target="second" class="wseries ps">
@@ -79,13 +78,11 @@
             </div>
         </div>
         <div class="wseries__items">
-            <div class="row column">
-                <div class="owl-carousel wseries__carousel">
-                    {{> walkcard}}
-                    {{> walkcard}}
-                    {{> walkcard}}
-                </div>
-            </div>
+            <ul class="wseries__list">
+                <li>{{> walkcard}}</li>
+                <li>{{> walkcard}}</li>
+                <li>{{> walkcard}}</li>
+            </ul>
         </div>
     </section>
     <section id="third" data-magellan-target="third" class="wseries ps">
@@ -106,12 +103,10 @@
             </div>
         </div>
         <div class="wseries__items">
-            <div class="row column">
-                <div class="owl-carousel wseries__carousel">
-                    {{> walkcard}}
-                    {{> walkcard}}
-                </div>
-            </div>
+            <ul class="wseries__list">
+                <li>{{> walkcard}}</li>
+                <li>{{> walkcard}}</li>
+            </ul>
         </div>
     </section>
 </div>

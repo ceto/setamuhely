@@ -1,23 +1,31 @@
 .eventcard {
   @include clearfix();
   position: relative;
-  background-color: #fff;
-  margin:1.75rem auto;
+  //background-color: #fff;
+  margin: 0 auto 1.25rem;
   //border: 1px solid $medium-gray;
-  box-shadow: 0 0 1.5rem 0 rgba(#000,.0875);
-  transition: box-shadow .2s ;
-  &:hover {
-    box-shadow: 0 0 1.5rem 0 rgba(#000,.125);
+  //box-shadow: 0 0 1.5rem 0 rgba(#000,.0875);
+  transition: all .4s;
+  border-top: 1px solid $light-gray;
+  padding-top: 1.25rem;
+  @include breakpoint(medium) {
+    background-color: $light-gray;
+    //box-shadow: 0 0 1.5rem 0 rgba(#000,.0875);
+    margin: 0 auto 1.75rem;
+    border:none;
+    padding: 0;
+    &:hover {
+      background-color: #fff;
+      box-shadow: 0 0 1.5rem 0 rgba(#000,.125);
+    }
   }
 }
 
 .eventcard__peak {
   @include clearfix();
   background-color: $primary-color;
-  // @include breakpoint(medium) {
-  //   float:left;
-  //   width: 5.5rem;
-  // }
+  float:right;
+  width: 6rem;
   @include breakpoint(medium) {
     float:left;
     width: 6rem;
@@ -43,13 +51,12 @@
 
 
 .eventcard__img {
-  display: block;
+  display: none;
   width:17rem;
   float:right;
 
 
   @include breakpoint(medium) {
-    display: none;
   }
   @include breakpoint(large) {
     display: block;
@@ -68,14 +75,13 @@
 }
 
 .eventcard__body {
-  padding:.75rem;
-  // @include breakpoint(medium) {
-  //   float:left;
-  //   width: calc(100% - 11rem);
-  // }
+  padding:0 .75rem 0 0;
+  margin-right: 6rem;
   @include breakpoint(medium) {
+    padding:.75rem;
     float:left;
     width: calc(100% - 17rem);
+    margin-right: 0;
   }
   @include breakpoint(large) {
     width: calc(100% - 30rem);
@@ -87,9 +93,12 @@
   }
 }
 .eventcard__title {
-  font-size: 1.333rem;
+  font-size: 1.25rem;
   margin:0 0 .75em;
   color:$primary-color;
+  @include breakpoint(medium) {
+    font-size: 1.333rem;
+  }
   @include breakpoint(xlarge) {
     font-size: 1.5rem;
   }
@@ -109,7 +118,10 @@
 }
 
 .eventcard__description {
-
+  display: none;
+  @include breakpoint(medium) {
+      display: block;
+    }
 
   p {
     margin:0;
@@ -126,11 +138,15 @@
 }
 
 .eventcard__tail {
-  padding:.75rem;
-  text-align: center;
+
+  padding:.75rem .75rem 0 0;
+  margin-right: 6rem;
   @include breakpoint(medium) {
+    padding:.75rem;
+    text-align: center;
     float:left;
     width: 11rem;
+    margin-right: 0;
   }
   @include breakpoint(large) {
     padding:.875rem;
@@ -142,6 +158,13 @@
 .eventcard__actions {
   .button {
     margin-bottom: 0;
+    font-size: .75rem;
+    @include breakpoint(medium) {
+      min-width: 100%;
+    }
+    @include breakpoint(large) {
+      font-size: .875rem;
+    }
   }
 }
 .eventcard__smallinfo {

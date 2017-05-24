@@ -1,13 +1,29 @@
-<section class="bigpromo">
-    <div class="row column">
-        <div class="bigpromo__inner">
-        <div class="owl-carousel bigpromo__carousel">
-            {{> bigpromoitem}}
-            {{> bigpromoitem2}}
-            {{> bigpromoitem3}}
-            {{> bigpromoitem}}
-            {{> bigpromoitem2}}
+<section class="hero">
+    <figure class="hero__bg">
+        <a href="single-walk.html">
+            <!-- <img src="http://lorempixel.com/1280/768" alt="Szecessziós divatséta"> -->
+            <img src="{{root}}/assets/img/nyilvantartanak.jpg" alt="Szecessziós divatséta">
+        </a>
+    </figure>
+    <div class="hero__content">
+        <p class="hero__subtext">Új séta</p>
+        <h1 class="hero__maintext">Szecessziós divatséta</h1>
+        <p class="hero__lead">Lázónak kodja csató a mentő és a dalan fotvárok elepcéhez való felését a vezős kutykákban? Néha a fácsartás is bőrös lehet, főképp a kölgyencék metésére</p>
+        <a href="single-walk.html" class="hero__action">Ismerd meg a részleteket</a>
+    </div>
+</section>
+<section class="heroplus">
+    <div class="heroplus__inner">
+        <div class="heroplus__gridder">
+            <h3 class="heroplus__title"><a href="archive-walk.html">További séták</a></h3>
         </div>
+
+        <div class="promoted">
+            <ul class="promoted__list">
+                <li>{{> promocard }}</li>
+                <li>{{> promocard2 }}</li>
+                <li>{{> promocard3 }}</li>
+            </ul>
         </div>
     </div>
 </section>
@@ -17,25 +33,17 @@
             <div class="columns large-8">
                 <h2 class="wseries__title">Helló! Van egy csomó jó sztorink. Sétálj velünk és elmeséljük!</h2>
                 <p class="wseries__lead"><strong>Szuper vezetett temeatikus sétáinkon</strong> szerő bisztege nem norlan, de atyagos, mert a szigás csombukáját táratják. A meg nem masányos pallomokat nem norlan billéznie. Ócska a csihlen tátalasznak radkodnia kell a ferjelet szaplatos jegyezőjét, vetőjét, háráját </p>
-            </div>
-            <div class="columns large-4 large-text-right">
                 <a href="{{root}}/archive-walk.html" class="button alert">Ismerd meg sétáinkat</a>
+            </div>
+            <div class="columns large-4">
+
             </div>
         </div>
     </header>
-    <div class="wseries__items">
-        <div class="row column">
-            <div class="owl-carousel wseries__carousel">
-                {{> walkcard}}
-                {{> walkcard}}
-                {{> walkcard}}
-            </div>
-        </div>
-    </div>
 </section>
-<section class="eventlist ps">
+<section class="eventlist ps aps--light ps--narrow">
     <div class="row column">
-        <h2 class="sectitle">Ezekre még odaérsz</h2>
+        <h3 class="heroplus__title"><a href="archive-event.html">Sétaidőpontok</a></h3>
     </div>
     <div class="row columns">
         {{> eventcard}}
@@ -47,3 +55,16 @@
         <a href="{{root}}/archive-event.html" class="button alert">Mutasd mindet</a>
     </div>
 </section>
+<!-- <section class="bigpromo">
+    <div class="row column">
+        <div class="bigpromo__inner">
+            <div class="owl-carousel bigpromo__carousel">
+                {{> bigpromoitem}}
+                {{> bigpromoitem2}}
+                {{> bigpromoitem3}}
+                {{> bigpromoitem}}
+                {{> bigpromoitem2}}
+            </div>
+        </div>
+    </div>
+</section> -->
