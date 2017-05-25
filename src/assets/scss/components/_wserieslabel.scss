@@ -1,6 +1,6 @@
 .wserieslabel {
   font-variant: small-caps;
-  background-color: $primary-color;
+  background-color: $secondary-color;
   padding:.25em .666em .333em;
   border-radius: 3px;
   line-height: 1.2;
@@ -9,7 +9,7 @@
   font-family: $header-font-family;
   display: inline-block;
   border:1px dashed $white;
-  box-shadow: 0 0 0 1px $primary-color;
+  box-shadow: 0 0 0 1px $secondary-color;
   a {
     color: inherit;
   }
