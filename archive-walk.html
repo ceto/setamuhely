@@ -1,30 +1,383 @@
-
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sétaműhely</title>
-    <link rel="stylesheet" href="assets/css/app.css">
-  </head>
-  <body>
-
-    <nav class="topbar">
-        <div class="row column">
-            <div class="topbar__inner">
-                <div class="topbar__home">
-                    <a href="/" class="sitelogo">Sétaműhely</a>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sétaműhely</title>
+        <link rel="stylesheet" href="assets/css/app.css">
+    </head>
+    <body>
+        <div class="off-canvas-wrapper">
+            <div class="off-canvas-content" data-off-canvas-content>
+                <nav class="topbar">
+                    <div class="row column expanded">
+                        <div class="topbar__inner">
+                            <div class="topbar__home">
+                                <a href="/" class="sitelogo">Sétaműhely</a>
+                            </div>
+                            <div class="topbar__mainnav show-for-tablet">
+                                <ul class="menu dropdown menu--main" data-dropdown-menu data-click-open="true" data-disable-hover="true">
+                                    <li><a href="/archive-walk.html">Séták</a></li>
+                                    <li><a href="/archive-event.html">Időpontok</a></li>
+                                    <li><a href="/helpinfo.html">Ajándékutalvány</a></li>
+                                    <li><a href="/helpinfo.html">Csapatás</a></li>
+                                    <li class="is-dropdown-submenu-parent">
+                                        <a href="/helpinfo.html">Help & Info</a>
+                                        <ul class="menu">
+                                            <li class="active"><a href="/helpinfo.html">Sétaműhely</a></li>
+                                            <li><a href="">Arcok</a></li>
+                                            <li><a href="">Segítség a vásárláshoz</a></li>
+                                            <li><a href="">Gyakori kérdések</a></li>
+                                            <li><a href="">Adatvédelem és ászf</a></li>
+                                            <li><a href="">Blog / Sétanapló</a></li>
+                                            <li><a href="">Kapcsolat</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="topbar__mobileblock hide-for-tablet">
+                                <button type="button" class="menutoggler" data-toggle="mobilenavcanvas"></button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <header class="hero">
+                    <figure class="hero__bg">
+                        <img src="/assets/img/bicaj.jpg" alt="Szecessziós divatséta">
+                    </figure>
+                    <div class="hero__content">
+                        <h1 class="hero__subtext">Tematikus séták Budapesten</h1>
+                        <p class="hero__maintext">Légy a valóság turistája!</p>
+                        <p class="hero__lead">Ismerd meg közösségformáló, emlékfeldolgozó és kortárs tereket bejáró sétáinkat és buszus túráinkat!</p>
+                    </div>
+                </header>
+                <div data-sticky-container>
+                    <nav class="stickynav sticky" data-sticky data-anchor="walkseries" data-margin-top="0" data-sticky-on="small">
+                        <div class="row collapse">
+                            <div class="columns">
+                                <div class="stickynav__inner">
+                                    <div class="stickynav__themenu">
+                                        <ul class="scrollmenu scrollmenu--topsticker" data-magellan data-bar-offset="0">
+                                            <li><a href="#first">Politikai Múlt</a></li>
+                                            <li><a href="#second">Városkép, Élettér</a></li>
+                                            <li><a href="#third">Kisebbségek, Közösségek</a></li>
+                                            <li><a href="#">Gender</a></li>
+                                            <li><a href="#">Gazdaságtörténet</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
-                <div class="topbar__mainnav">
-                    <ul class="menu dropdown menu--main" data-dropdown-menu data-click-open="true" data-disable-hover="true">
+                <div id="walkseries" class="walkseries">
+                    <section id="first" data-magellan-target="first" class="wseries ps">
+                        <header class="wseries__head">
+                            <div class="row">
+                                <div class="columns large-8">
+                                    <h3 class="wseries__shorttitle wserieslabel">Politikai Múlt</h3>
+                                    <h2 class="wseries__title">Hűlt helyek és forró nyomok</h2>
+                                    <p class="wseries__lead">Hol vannak még ma is nyomai Trianonnak a fővárosban? Hogyan zajlott le Budapesten a 2. világháború egyik legvéresebb és leghosszabb ostroma? Hogyan élünk ma egy olyan városban, amelyet a kommunista diktatúra állított helyre? Hová vándorolnak a felállított majd ledöntött emlékművek</p>
+                                </div>
+                            </div>
+                        </header>
+                        <div id="sdescr1" class="wseries__description is-hidden" data-toggler="is-hidden">
+                            <div class="row column">
+                                <div class="doubledcols">
+                                    <p>Sorozatunk Budapest huszadik századi történelmének traumáit feldolgozó városi sétákból áll.</p>
+                                    <p>Az első világháborút lezáró trianoni békének is maradt néhány látható nyoma a fővárosban, de a budapesti táj mai képét sokkal inkább meghatározza a második világháború, amelynek egyik legvéresebb és leghosszabban tartó városostroma zajlott itt. A lerombolt utcákat, hidakat és ipari területeket később a kommunista diktatúra állította helyre, amely a saját ideológiája szerint hagyott maradandó nyomot a városképben. A légitámadások idején épült bunkerek és a hidegháború jegyében létrehozott föld alatti objektumok gyakran eredeti formájukban léteznek ma is, míg a kommunizmusban kiépült ügynökhálózat által használt titkos lakásoknak még a beazonosítása is nehézségbe ütközik. A rendszerváltás után a diktatúra emlékműveit eltávolították, de a versenyképtelen szocialista ipar elnéptelenedett üzemei ma is láthatóak. Ezek a traumatizált városi terek erősen hatnak az ott élőkre, akkor is, ha a hozzájuk fűződő történetek nem is ismertek.</p>
+                                    <p>Mára elsődleges feladattá vált a történelmi múlttal való szembenézés. Pszichoanalitikus konferenciákat és kerekasztal-beszélgetéseket rendeznek ebben a témában. Mi sétákat szervezünk, amelyek során bejárjuk ezeket a traumatizált helyszíneket, és megemlékezünk a közelmúlt történeteiről és az áldozatokról.</p>
+                                    <p>A sorozat címadója Szegő János irodalmi kritikus, a Magvető szerkesztője, aki ezzel a címmel írt kritikát Kiss Noémi Rongyos ékszerdoboz című művéről.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wseries__items">
+                            <ul class="wseries__list">
+                                <li><div class="walkcard">
+                    <figure class="walkcard__fig">
+                        <a href="single-walk.html" class="walkcard__img">
+                            <img src="http://lorempixel.com/640/360" alt="Éljen a piac!">
+                            <!-- <img src="http://placehold.it/640x360" alt="Éljen a piac!"> -->
+                        </a>
+                    </figure>
+                    <header class="walkcard__head">
+                        <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
+                        <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
+                        <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
+                    </header>
+                    <div class="walkcard__body">
+                        <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
+                    </div>
+                    <footer class="walkcard__foot">
+                        <div class="walkcard__actions">
+                            <a href="single-walk.html" class="walkcard__button">Időpontok és részletek&hellip;</a>
+                        </div>
+                    </footer>
+                </div>
+                </li>
+                                <li><div class="walkcard">
+                    <figure class="walkcard__fig">
+                        <a href="single-walk.html" class="walkcard__img">
+                            <img src="http://lorempixel.com/640/360" alt="Éljen a piac!">
+                            <!-- <img src="http://placehold.it/640x360" alt="Éljen a piac!"> -->
+                        </a>
+                    </figure>
+                    <header class="walkcard__head">
+                        <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
+                        <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
+                        <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
+                    </header>
+                    <div class="walkcard__body">
+                        <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
+                    </div>
+                    <footer class="walkcard__foot">
+                        <div class="walkcard__actions">
+                            <a href="single-walk.html" class="walkcard__button">Időpontok és részletek&hellip;</a>
+                        </div>
+                    </footer>
+                </div>
+                </li>
+                                <li><div class="walkcard">
+                    <figure class="walkcard__fig">
+                        <a href="single-walk.html" class="walkcard__img">
+                            <img src="http://lorempixel.com/640/360" alt="Éljen a piac!">
+                            <!-- <img src="http://placehold.it/640x360" alt="Éljen a piac!"> -->
+                        </a>
+                    </figure>
+                    <header class="walkcard__head">
+                        <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
+                        <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
+                        <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
+                    </header>
+                    <div class="walkcard__body">
+                        <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
+                    </div>
+                    <footer class="walkcard__foot">
+                        <div class="walkcard__actions">
+                            <a href="single-walk.html" class="walkcard__button">Időpontok és részletek&hellip;</a>
+                        </div>
+                    </footer>
+                </div>
+                </li>
+                                <li><div class="walkcard">
+                    <figure class="walkcard__fig">
+                        <a href="single-walk.html" class="walkcard__img">
+                            <img src="http://lorempixel.com/640/360" alt="Éljen a piac!">
+                            <!-- <img src="http://placehold.it/640x360" alt="Éljen a piac!"> -->
+                        </a>
+                    </figure>
+                    <header class="walkcard__head">
+                        <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
+                        <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
+                        <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
+                    </header>
+                    <div class="walkcard__body">
+                        <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
+                    </div>
+                    <footer class="walkcard__foot">
+                        <div class="walkcard__actions">
+                            <a href="single-walk.html" class="walkcard__button">Időpontok és részletek&hellip;</a>
+                        </div>
+                    </footer>
+                </div>
+                </li>
+                                <li><div class="walkcard">
+                    <figure class="walkcard__fig">
+                        <a href="single-walk.html" class="walkcard__img">
+                            <img src="http://lorempixel.com/640/360" alt="Éljen a piac!">
+                            <!-- <img src="http://placehold.it/640x360" alt="Éljen a piac!"> -->
+                        </a>
+                    </figure>
+                    <header class="walkcard__head">
+                        <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
+                        <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
+                        <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
+                    </header>
+                    <div class="walkcard__body">
+                        <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
+                    </div>
+                    <footer class="walkcard__foot">
+                        <div class="walkcard__actions">
+                            <a href="single-walk.html" class="walkcard__button">Időpontok és részletek&hellip;</a>
+                        </div>
+                    </footer>
+                </div>
+                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="second" data-magellan-target="second" class="wseries ps">
+                        <header class="wseries__head">
+                            <div class="row">
+                                <div class="columns large-8">
+                                    <h3 class="wseries__shorttitle wserieslabel">Városkép, Élettér</h3>
+                                    <h2 class="wseries__title">Hazánk felett az ég</h2>
+                                    <p class="wseries__lead">Hogyan élünk ma ebben a városban? Fókuszban a város jelene, mely sosem független a múlttól. Mit kezdünk az üresen maradt, versenyképtelen üzemekkel, és milyen jövőt szánunk nekik? Hogyan megyünk el nap mint nap a túl magas padkák, az éjszakára bezárt parkok mellett? Mennyire miénk a város</p>
+                                </div>
+                            </div>
+                        </header>
+                        <div id="sdescr2" class="wseries__description is-hidden" data-toggler="is-hidden">
+                            <div class="row column">
+                                <div class="doubledcols">
+                                    <p>Sorozatunkban Budapest városképével foglalkozunk - az építészet, urbanisztika, a szociológia és a különböző művészeti ágak segítségével.</p>
+                                    <p>A város nem stagnáló váz, állandó szerkezet, hanem dinamikusan formálódó, alakuló élettér, amelyet nemcsak épületei, de lakói is meghatároznak. Hogyan élünk ma ebben a városban? Mit tudunk a minket körülvevő épületek történetéről? Miért áll három éve ez az építkezés? Kik döntenek arról, hogy egyirányú lesz az az utca? Mit kezdünk az üresen maradt, versenyképtelen üzemekkel, hogyan megyünk el nap mint nap üres portálok mellett? Milyen jövőt szánunk nekik? Fókuszban a város jelene, mely sosem független a múlttól.</p>
+                                    <p>Mitől szép ez a város? A telefirkált rolóktól vagy a zöldülő patinás szobroktól? Európában egyedülállóan gazdag építészeti stílusától? Hogyan tükrözik a politikai változásokat a folyton változó, felállított, majd eltávolított műemlékek? Hol jelennek meg street-art munkák és graffitik? És vajon mekkora az együttműködési készség a város vezetősége részéről, hogy a kreatív energiákat a város javára fordítsa?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wseries__items">
+                            <ul class="wseries__list">
+                                <li><div class="walkcard">
+                    <figure class="walkcard__fig">
+                        <a href="single-walk.html" class="walkcard__img">
+                            <img src="http://lorempixel.com/640/360" alt="Éljen a piac!">
+                            <!-- <img src="http://placehold.it/640x360" alt="Éljen a piac!"> -->
+                        </a>
+                    </figure>
+                    <header class="walkcard__head">
+                        <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
+                        <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
+                        <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
+                    </header>
+                    <div class="walkcard__body">
+                        <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
+                    </div>
+                    <footer class="walkcard__foot">
+                        <div class="walkcard__actions">
+                            <a href="single-walk.html" class="walkcard__button">Időpontok és részletek&hellip;</a>
+                        </div>
+                    </footer>
+                </div>
+                </li>
+                                <li><div class="walkcard">
+                    <figure class="walkcard__fig">
+                        <a href="single-walk.html" class="walkcard__img">
+                            <img src="http://lorempixel.com/640/360" alt="Éljen a piac!">
+                            <!-- <img src="http://placehold.it/640x360" alt="Éljen a piac!"> -->
+                        </a>
+                    </figure>
+                    <header class="walkcard__head">
+                        <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
+                        <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
+                        <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
+                    </header>
+                    <div class="walkcard__body">
+                        <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
+                    </div>
+                    <footer class="walkcard__foot">
+                        <div class="walkcard__actions">
+                            <a href="single-walk.html" class="walkcard__button">Időpontok és részletek&hellip;</a>
+                        </div>
+                    </footer>
+                </div>
+                </li>
+                                <li><div class="walkcard">
+                    <figure class="walkcard__fig">
+                        <a href="single-walk.html" class="walkcard__img">
+                            <img src="http://lorempixel.com/640/360" alt="Éljen a piac!">
+                            <!-- <img src="http://placehold.it/640x360" alt="Éljen a piac!"> -->
+                        </a>
+                    </figure>
+                    <header class="walkcard__head">
+                        <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
+                        <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
+                        <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
+                    </header>
+                    <div class="walkcard__body">
+                        <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
+                    </div>
+                    <footer class="walkcard__foot">
+                        <div class="walkcard__actions">
+                            <a href="single-walk.html" class="walkcard__button">Időpontok és részletek&hellip;</a>
+                        </div>
+                    </footer>
+                </div>
+                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="third" data-magellan-target="third" class="wseries ps">
+                        <header class="wseries__head">
+                            <div class="row">
+                                <div class="columns large-8">
+                                    <h3 class="wseries__shorttitle wserieslabel">Kisebbségek, Közösségek</h3>
+                                    <h2 class="wseries__title">Nem vagy idegen</h2>
+                                    <p class="wseries__lead">Mitől szép ez a város: a telefirkált rolóktól, a zöldülő patinás szobroktól? A folyton változó, felállított, majd eltávolított műemlékektől? Európában egyedülállóan gazdag építészeti stílusától? Hivatalos művészet, köztéri művészet, public art egy város lakóinak és alkotóinak keresztmetszetében.</p>
+                                </div>
+                            </div>
+                        </header>
+                        <div id="sdescr3" class="wseries__description is-hidden" data-toggler="is-hidden">
+                            <div class="row column">
+                                <div class="doubledcols">
+                                    <p>A város sosem független a benne élő lakóközösségektől, ahogy Frederic Barbier is írja A modern Európa című írásában. A város a különböző világok találkozási pontjaként  értelmezhető, s ez mindig túlmutat a hagyományos társadalmi felosztáson. Tudjuk, hogy Budapest sem csak épületekből és utcákból áll, éppen ezért sétáink egy része magukkal a városlakókkal foglalkozik: különböző társadalmi csoportok, kisebbségek, vallások, elismert vagy épp ellenkezőleg, perifériára szorult emberek állnak ezen sétáink fókuszában - s rajtuk keresztül egy-egy megoldásra váró, mindennapjainkban jelenlévő társadalmi probléma. Bevándorlók és romák, zsidók és keresztények, melegek és heteroszexuálisok. Sétáink során felderítjük, kik, hogyan élnek a multikulturális Budapesten a 21. század elején, milyen gyökerekkel rendelkeznek a múltban, s ez hogyan befolyásolja mindennapjaikat.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wseries__items">
+                            <ul class="wseries__list">
+                                <li><div class="walkcard">
+                    <figure class="walkcard__fig">
+                        <a href="single-walk.html" class="walkcard__img">
+                            <img src="http://lorempixel.com/640/360" alt="Éljen a piac!">
+                            <!-- <img src="http://placehold.it/640x360" alt="Éljen a piac!"> -->
+                        </a>
+                    </figure>
+                    <header class="walkcard__head">
+                        <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
+                        <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
+                        <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
+                    </header>
+                    <div class="walkcard__body">
+                        <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
+                    </div>
+                    <footer class="walkcard__foot">
+                        <div class="walkcard__actions">
+                            <a href="single-walk.html" class="walkcard__button">Időpontok és részletek&hellip;</a>
+                        </div>
+                    </footer>
+                </div>
+                </li>
+                                <li><div class="walkcard">
+                    <figure class="walkcard__fig">
+                        <a href="single-walk.html" class="walkcard__img">
+                            <img src="http://lorempixel.com/640/360" alt="Éljen a piac!">
+                            <!-- <img src="http://placehold.it/640x360" alt="Éljen a piac!"> -->
+                        </a>
+                    </figure>
+                    <header class="walkcard__head">
+                        <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
+                        <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
+                        <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
+                    </header>
+                    <div class="walkcard__body">
+                        <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
+                    </div>
+                    <footer class="walkcard__foot">
+                        <div class="walkcard__actions">
+                            <a href="single-walk.html" class="walkcard__button">Időpontok és részletek&hellip;</a>
+                        </div>
+                    </footer>
+                </div>
+                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <footer class="sitefooter ps ps--narrow">
+                  <div class="row column">&copy; 2017 Sétaműhely Kft. Minden jog fenntartva.</div>
+                </footer>
+            </div>
+            <div class="off-canvas position-left mobilenavcanvas" id="mobilenavcanvas" data-off-canvas data-auto-focus="false">
+                <!-- Your menu or Off-canvas content goes here -->
+                <nav class="mobilenav">
+                    <ul class="menu dropdown menu--mobile vertical" data-accordion-menu>
                         <li><a href="/archive-walk.html">Séták</a></li>
                         <li><a href="/archive-event.html">Időpontok</a></li>
-                        <li><a href="/helpinfo.html">Ajándékutalvány</a></li>
+                        <li class="active"><a href="/helpinfo.html">Ajándékutalvány</a></li>
                         <li><a href="/helpinfo.html">Csapatás</a></li>
-                        <li class="is-dropdown-submenu-parent">
-                            <a href="/helpinfo.html">Help & Info</a>
-                            <ul class="menu">
+                        <li><a href="/helpinfo.html">Help & Info</a>
+                            <ul class="menu vertical">
                                 <li class="active"><a href="/helpinfo.html">Sétaműhely</a></li>
                                 <li><a href="">Arcok</a></li>
                                 <li><a href="">Segítség a vásárláshoz</a></li>
@@ -35,336 +388,16 @@
                             </ul>
                         </li>
                     </ul>
+                </nav>
+                <div class="mobilecontact">
+                    <p>
+                    <strong>Kapcsolatfelvétel</strong><br>
+                    Tel.: +36 (70) 770 5653<br>
+                    E-mail: help@setamuhely.hu
+                    </p>
                 </div>
             </div>
         </div>
-    </nav>
-    <header class="hero">
-        <figure class="hero__bg">
-            <img src="/assets/img/bicaj.jpg" alt="Szecessziós divatséta">
-        </figure>
-        <div class="hero__content">
-            <h1 class="hero__subtext">Tematikus séták Budapesten</h1>
-            <p class="hero__maintext">Légy a valóság turistája!</p>
-            <p class="hero__lead">Ismerd meg közösségformáló, emlékfeldolgozó és kortárs tereket bejáró sétáinkat és buszus túráinkat!</p>
-        </div>
-    </header>
-    <div data-sticky-container>
-        <nav class="stickynav sticky" data-sticky data-anchor="walkseries" data-margin-top="0" data-sticky-on="small">
-            <div class="row collapse">
-                <div class="columns">
-                    <div class="stickynav__inner">
-                        <div class="stickynav__themenu">
-                            <ul class="scrollmenu scrollmenu--topsticker" data-magellan data-bar-offset="0">
-                                <li><a href="#first">Politikai Múlt</a></li>
-                                <li><a href="#second">Városkép, Élettér</a></li>
-                                <li><a href="#third">Kisebbségek, Közösségek</a></li>
-                                <li><a href="#">Gender</a></li>
-                                <li><a href="#">Gazdaságtörténet</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <div id="walkseries" class="walkseries">
-        <section id="first" data-magellan-target="first" class="wseries ps">
-            <header class="wseries__head">
-                <div class="row">
-                    <div class="columns large-8">
-                        <h3 class="wseries__shorttitle wserieslabel">Politikai Múlt</h3>
-                        <h2 class="wseries__title">Hűlt helyek és forró nyomok</h2>
-                        <p class="wseries__lead">Hol vannak még ma is nyomai Trianonnak a fővárosban? Hogyan zajlott le Budapesten a 2. világháború egyik legvéresebb és leghosszabb ostroma? Hogyan élünk ma egy olyan városban, amelyet a kommunista diktatúra állított helyre? Hová vándorolnak a felállított majd ledöntött emlékművek</p>
-                    </div>
-                </div>
-            </header>
-            <div id="sdescr1" class="wseries__description is-hidden" data-toggler="is-hidden">
-                <div class="row column">
-                    <div class="doubledcols">
-                        <p>Sorozatunk Budapest huszadik századi történelmének traumáit feldolgozó városi sétákból áll.</p>
-                        <p>Az első világháborút lezáró trianoni békének is maradt néhány látható nyoma a fővárosban, de a budapesti táj mai képét sokkal inkább meghatározza a második világháború, amelynek egyik legvéresebb és leghosszabban tartó városostroma zajlott itt. A lerombolt utcákat, hidakat és ipari területeket később a kommunista diktatúra állította helyre, amely a saját ideológiája szerint hagyott maradandó nyomot a városképben. A légitámadások idején épült bunkerek és a hidegháború jegyében létrehozott föld alatti objektumok gyakran eredeti formájukban léteznek ma is, míg a kommunizmusban kiépült ügynökhálózat által használt titkos lakásoknak még a beazonosítása is nehézségbe ütközik. A rendszerváltás után a diktatúra emlékműveit eltávolították, de a versenyképtelen szocialista ipar elnéptelenedett üzemei ma is láthatóak. Ezek a traumatizált városi terek erősen hatnak az ott élőkre, akkor is, ha a hozzájuk fűződő történetek nem is ismertek.</p>
-                        <p>Mára elsődleges feladattá vált a történelmi múlttal való szembenézés. Pszichoanalitikus konferenciákat és kerekasztal-beszélgetéseket rendeznek ebben a témában. Mi sétákat szervezünk, amelyek során bejárjuk ezeket a traumatizált helyszíneket, és megemlékezünk a közelmúlt történeteiről és az áldozatokról.</p>
-                        <p>A sorozat címadója Szegő János irodalmi kritikus, a Magvető szerkesztője, aki ezzel a címmel írt kritikát Kiss Noémi Rongyos ékszerdoboz című művéről.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="wseries__items">
-                <ul class="wseries__list">
-                    <li><div class="walkcard">
-        <figure class="walkcard__fig">
-            <a href="single-walk.html" class="walkcard__img">
-                <!-- <img src="http://lorempixel.com/640/360" alt="Éljen a piac!"> -->
-                <img src="http://placehold.it/640x360" alt="Éljen a piac!">
-            </a>
-        </figure>
-        <header class="walkcard__head">
-            <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
-            <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
-            <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
-        </header>
-        <div class="walkcard__body">
-            <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
-        </div>
-        <footer class="walkcard__foot">
-            <div class="walkcard__actions">
-                <a href="single-walk.html" class="button secondary small">Részletek</a>
-            </div>
-        </footer>
-    </div>
-    </li>
-                    <li><div class="walkcard">
-        <figure class="walkcard__fig">
-            <a href="single-walk.html" class="walkcard__img">
-                <!-- <img src="http://lorempixel.com/640/360" alt="Éljen a piac!"> -->
-                <img src="http://placehold.it/640x360" alt="Éljen a piac!">
-            </a>
-        </figure>
-        <header class="walkcard__head">
-            <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
-            <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
-            <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
-        </header>
-        <div class="walkcard__body">
-            <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
-        </div>
-        <footer class="walkcard__foot">
-            <div class="walkcard__actions">
-                <a href="single-walk.html" class="button secondary small">Részletek</a>
-            </div>
-        </footer>
-    </div>
-    </li>
-                    <li><div class="walkcard">
-        <figure class="walkcard__fig">
-            <a href="single-walk.html" class="walkcard__img">
-                <!-- <img src="http://lorempixel.com/640/360" alt="Éljen a piac!"> -->
-                <img src="http://placehold.it/640x360" alt="Éljen a piac!">
-            </a>
-        </figure>
-        <header class="walkcard__head">
-            <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
-            <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
-            <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
-        </header>
-        <div class="walkcard__body">
-            <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
-        </div>
-        <footer class="walkcard__foot">
-            <div class="walkcard__actions">
-                <a href="single-walk.html" class="button secondary small">Részletek</a>
-            </div>
-        </footer>
-    </div>
-    </li>
-                    <li><div class="walkcard">
-        <figure class="walkcard__fig">
-            <a href="single-walk.html" class="walkcard__img">
-                <!-- <img src="http://lorempixel.com/640/360" alt="Éljen a piac!"> -->
-                <img src="http://placehold.it/640x360" alt="Éljen a piac!">
-            </a>
-        </figure>
-        <header class="walkcard__head">
-            <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
-            <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
-            <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
-        </header>
-        <div class="walkcard__body">
-            <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
-        </div>
-        <footer class="walkcard__foot">
-            <div class="walkcard__actions">
-                <a href="single-walk.html" class="button secondary small">Részletek</a>
-            </div>
-        </footer>
-    </div>
-    </li>
-                    <li><div class="walkcard">
-        <figure class="walkcard__fig">
-            <a href="single-walk.html" class="walkcard__img">
-                <!-- <img src="http://lorempixel.com/640/360" alt="Éljen a piac!"> -->
-                <img src="http://placehold.it/640x360" alt="Éljen a piac!">
-            </a>
-        </figure>
-        <header class="walkcard__head">
-            <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
-            <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
-            <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
-        </header>
-        <div class="walkcard__body">
-            <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
-        </div>
-        <footer class="walkcard__foot">
-            <div class="walkcard__actions">
-                <a href="single-walk.html" class="button secondary small">Részletek</a>
-            </div>
-        </footer>
-    </div>
-    </li>
-                </ul>
-            </div>
-        </section>
-        <section id="second" data-magellan-target="second" class="wseries ps">
-            <header class="wseries__head">
-                <div class="row">
-                    <div class="columns large-8">
-                        <h3 class="wseries__shorttitle wserieslabel">Városkép, Élettér</h3>
-                        <h2 class="wseries__title">Hazánk felett az ég</h2>
-                        <p class="wseries__lead">Hogyan élünk ma ebben a városban? Fókuszban a város jelene, mely sosem független a múlttól. Mit kezdünk az üresen maradt, versenyképtelen üzemekkel, és milyen jövőt szánunk nekik? Hogyan megyünk el nap mint nap a túl magas padkák, az éjszakára bezárt parkok mellett? Mennyire miénk a város</p>
-                    </div>
-                </div>
-            </header>
-            <div id="sdescr2" class="wseries__description is-hidden" data-toggler="is-hidden">
-                <div class="row column">
-                    <div class="doubledcols">
-                        <p>Sorozatunkban Budapest városképével foglalkozunk - az építészet, urbanisztika, a szociológia és a különböző művészeti ágak segítségével.</p>
-                        <p>A város nem stagnáló váz, állandó szerkezet, hanem dinamikusan formálódó, alakuló élettér, amelyet nemcsak épületei, de lakói is meghatároznak. Hogyan élünk ma ebben a városban? Mit tudunk a minket körülvevő épületek történetéről? Miért áll három éve ez az építkezés? Kik döntenek arról, hogy egyirányú lesz az az utca? Mit kezdünk az üresen maradt, versenyképtelen üzemekkel, hogyan megyünk el nap mint nap üres portálok mellett? Milyen jövőt szánunk nekik? Fókuszban a város jelene, mely sosem független a múlttól.</p>
-                        <p>Mitől szép ez a város? A telefirkált rolóktól vagy a zöldülő patinás szobroktól? Európában egyedülállóan gazdag építészeti stílusától? Hogyan tükrözik a politikai változásokat a folyton változó, felállított, majd eltávolított műemlékek? Hol jelennek meg street-art munkák és graffitik? És vajon mekkora az együttműködési készség a város vezetősége részéről, hogy a kreatív energiákat a város javára fordítsa?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="wseries__items">
-                <ul class="wseries__list">
-                    <li><div class="walkcard">
-        <figure class="walkcard__fig">
-            <a href="single-walk.html" class="walkcard__img">
-                <!-- <img src="http://lorempixel.com/640/360" alt="Éljen a piac!"> -->
-                <img src="http://placehold.it/640x360" alt="Éljen a piac!">
-            </a>
-        </figure>
-        <header class="walkcard__head">
-            <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
-            <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
-            <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
-        </header>
-        <div class="walkcard__body">
-            <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
-        </div>
-        <footer class="walkcard__foot">
-            <div class="walkcard__actions">
-                <a href="single-walk.html" class="button secondary small">Részletek</a>
-            </div>
-        </footer>
-    </div>
-    </li>
-                    <li><div class="walkcard">
-        <figure class="walkcard__fig">
-            <a href="single-walk.html" class="walkcard__img">
-                <!-- <img src="http://lorempixel.com/640/360" alt="Éljen a piac!"> -->
-                <img src="http://placehold.it/640x360" alt="Éljen a piac!">
-            </a>
-        </figure>
-        <header class="walkcard__head">
-            <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
-            <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
-            <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
-        </header>
-        <div class="walkcard__body">
-            <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
-        </div>
-        <footer class="walkcard__foot">
-            <div class="walkcard__actions">
-                <a href="single-walk.html" class="button secondary small">Részletek</a>
-            </div>
-        </footer>
-    </div>
-    </li>
-                    <li><div class="walkcard">
-        <figure class="walkcard__fig">
-            <a href="single-walk.html" class="walkcard__img">
-                <!-- <img src="http://lorempixel.com/640/360" alt="Éljen a piac!"> -->
-                <img src="http://placehold.it/640x360" alt="Éljen a piac!">
-            </a>
-        </figure>
-        <header class="walkcard__head">
-            <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
-            <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
-            <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
-        </header>
-        <div class="walkcard__body">
-            <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
-        </div>
-        <footer class="walkcard__foot">
-            <div class="walkcard__actions">
-                <a href="single-walk.html" class="button secondary small">Részletek</a>
-            </div>
-        </footer>
-    </div>
-    </li>
-                </ul>
-            </div>
-        </section>
-        <section id="third" data-magellan-target="third" class="wseries ps">
-            <header class="wseries__head">
-                <div class="row">
-                    <div class="columns large-8">
-                        <h3 class="wseries__shorttitle wserieslabel">Kisebbségek, Közösségek</h3>
-                        <h2 class="wseries__title">Nem vagy idegen</h2>
-                        <p class="wseries__lead">Mitől szép ez a város: a telefirkált rolóktól, a zöldülő patinás szobroktól? A folyton változó, felállított, majd eltávolított műemlékektől? Európában egyedülállóan gazdag építészeti stílusától? Hivatalos művészet, köztéri művészet, public art egy város lakóinak és alkotóinak keresztmetszetében.</p>
-                    </div>
-                </div>
-            </header>
-            <div id="sdescr3" class="wseries__description is-hidden" data-toggler="is-hidden">
-                <div class="row column">
-                    <div class="doubledcols">
-                        <p>A város sosem független a benne élő lakóközösségektől, ahogy Frederic Barbier is írja A modern Európa című írásában. A város a különböző világok találkozási pontjaként  értelmezhető, s ez mindig túlmutat a hagyományos társadalmi felosztáson. Tudjuk, hogy Budapest sem csak épületekből és utcákból áll, éppen ezért sétáink egy része magukkal a városlakókkal foglalkozik: különböző társadalmi csoportok, kisebbségek, vallások, elismert vagy épp ellenkezőleg, perifériára szorult emberek állnak ezen sétáink fókuszában - s rajtuk keresztül egy-egy megoldásra váró, mindennapjainkban jelenlévő társadalmi probléma. Bevándorlók és romák, zsidók és keresztények, melegek és heteroszexuálisok. Sétáink során felderítjük, kik, hogyan élnek a multikulturális Budapesten a 21. század elején, milyen gyökerekkel rendelkeznek a múltban, s ez hogyan befolyásolja mindennapjaikat.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="wseries__items">
-                <ul class="wseries__list">
-                    <li><div class="walkcard">
-        <figure class="walkcard__fig">
-            <a href="single-walk.html" class="walkcard__img">
-                <!-- <img src="http://lorempixel.com/640/360" alt="Éljen a piac!"> -->
-                <img src="http://placehold.it/640x360" alt="Éljen a piac!">
-            </a>
-        </figure>
-        <header class="walkcard__head">
-            <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
-            <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
-            <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
-        </header>
-        <div class="walkcard__body">
-            <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
-        </div>
-        <footer class="walkcard__foot">
-            <div class="walkcard__actions">
-                <a href="single-walk.html" class="button secondary small">Részletek</a>
-            </div>
-        </footer>
-    </div>
-    </li>
-                    <li><div class="walkcard">
-        <figure class="walkcard__fig">
-            <a href="single-walk.html" class="walkcard__img">
-                <!-- <img src="http://lorempixel.com/640/360" alt="Éljen a piac!"> -->
-                <img src="http://placehold.it/640x360" alt="Éljen a piac!">
-            </a>
-        </figure>
-        <header class="walkcard__head">
-            <!-- <p class="walkcard__presents">Somogyi-Rohonczy Zsófia <span>bemutatja</span></p> -->
-            <h3 class="walkcard__title"><a href="single-walk.html">Zsidók és törökök a budai Várban</a></h3>
-            <h4 class="walkcard__subtitle">Tematikus séta a városfaltól a sóházig</h4>
-        </header>
-        <div class="walkcard__body">
-            <p>Nemcsak a Vásárcsarnokot, és a rakpartra levezető alagútját derítjük fel, de a középkori városfal maradványaitól elindulva felderítjük, mi lett az egykori Fővámházból, a Közraktárakból és a Sóházból.</p>
-        </div>
-        <footer class="walkcard__foot">
-            <div class="walkcard__actions">
-                <a href="single-walk.html" class="button secondary small">Részletek</a>
-            </div>
-        </footer>
-    </div>
-    </li>
-                </ul>
-            </div>
-        </section>
-    </div>
-    <footer class="sitefooter ps ps--narrow">
-      <div class="row column">&copy; 2017 Sétaműhely Kft. Minden jog fenntartva.</div>
-    </footer>
-
-    <script src="assets/js/app.js"></script>
-  </body>
+        <script src="assets/js/app.js"></script>
+    </body>
 </html>
