@@ -1,20 +1,25 @@
 {{!-- This is the base layout for your project, and will be used on every page. --}}
-
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sétaműhely</title>
-    <link rel="stylesheet" href="{{root}}assets/css/app.css">
-  </head>
-  <body>
-
-    {{> topbar }}
-    {{> body}}
-    {{> sitefooter }}
-
-    <script src="{{root}}assets/js/app.js"></script>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sétaműhely</title>
+        <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    </head>
+    <body>
+        <div class="off-canvas-wrapper">
+            <div class="off-canvas-content" data-off-canvas-content>
+                {{> topbar }}
+                {{> body}}
+                {{> sitefooter }}
+            </div>
+            <div class="off-canvas position-left mobilenavcanvas" id="mobilenavcanvas" data-off-canvas data-auto-focus="false">
+                <!-- Your menu or Off-canvas content goes here -->
+                {{> mobilecanvas }}
+            </div>
+        </div>
+        <script src="{{root}}assets/js/app.js"></script>
+    </body>
 </html>

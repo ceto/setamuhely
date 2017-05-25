@@ -2,6 +2,11 @@
   //background-color: $white;
   border-bottom: 1px solid $light-gray;
   box-shadow: 0 0 1rem 0 rgba(#000, .125);
+  // > .row {
+  //   @include breakpoint(xxlarge) {
+  //     max-width: none;
+  //   }
+  // }
 }
 .topbar__inner {
   height:5rem;
@@ -32,4 +37,13 @@
   transform: translateY(-50%);
   top: 50%;
   right: 0;
+}
+.topbar__mobileblock {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 0;
+}
+.menutoggler {
+  @include hamburger($anchor-color, scale-color($alert-color, $lightness: -14%), 34px, 24px, 1px, 3);
 }

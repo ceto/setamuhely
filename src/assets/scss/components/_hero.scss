@@ -62,7 +62,7 @@
   }
 }
 .hero__content {
-  pointer-events: none;
+    pointer-events: none;
   position: relative;
   max-width: $grid-row-width;
   margin:0 auto;
@@ -81,7 +81,7 @@
   font-size: .875rem;
   font-family: $header-font-family;
   font-weight: $global-weight-bold;
-  margin:0 0 .5em;
+  margin:0 0 .333em;
   text-transform: uppercase;
 
   &:after {
@@ -90,11 +90,11 @@
     display: block;
     background-color: $alert-color;
     width:100%;
-    max-width: 4.5em;
+    max-width: 2.5em;
     height:.333em;
   }
   @include breakpoint(large) {
-    font-size: 1.333rem;
+    font-size: 1.25rem;
   }
 
 }
@@ -127,16 +127,22 @@
   color:inherit;
   text-transform: uppercase;
   letter-spacing: .05em;
+  pointer-events: auto;
+  line-height: 1;
   &:hover, &:focus {
-    color:inherit;
+    color:$alert-color;
   }
-  &:after {
-    content: ' >>';
+  &:before {
+    display: inline-block;
+    content: '\00bb';
+    color:$alert-color;
+    margin-right:.333em;
+    transform: scale(1.333) translateY(-.1em);
   }
 }
 
 .heroplus {
-  padding:2rem 0 3rem;
+  padding:2rem 0 2rem;
   border-bottom: 1px solid $light-gray;
 }
 .heroplus__inner {

@@ -1,36 +1,81 @@
 .promocard {
-  position: relative;
-  background-color: #000;
-  color:$white;
+  //background-color: #000;
+  //color:$white;
+  &:hover {
+    .promocard__title, {
+      color:$primary-color;
+    }
+    .promocard__text {
+      //color:$secondary-color;
+    }
+    .promocard__fig:before {
+      opacity: 0;
+    }
+  }
 }
 .promocard__fig {
-  &:after {
+  position: relative;
+  &:before {
     content:'';
     position: absolute;
     left:0;
     top:0;
     width:100%;
     height:100%;
-    background-color: red;
-    background: linear-gradient(to bottom,transparent 0,rgba(0,0,0,.35) 70%,rgba(0,0,0,.5) 100%);
+    background: linear-gradient(to bottom,transparent 0,rgba(0,0,0,.15) 50%,rgba(0,0,0,.25) 100%);
     pointer-events: none;
+    transition: opacity .2s;
   }
 }
-.promocard__head {
+.promocard__caption {
+  color:$white;
   position: absolute;
   width:100%;
   bottom:0;
-  padding:7% 7%;
+  padding:0 .75rem .5rem;
+  font-size: .875rem;
+  //text-transform: uppercase;
+  font-family: $header-font-family;
+  font-weight: $global-weight-bold;
+}
+.promocard__body {
+  padding:.75rem 1em;
+  font-size: .875rem;
+  @include breakpoint(large) {
+    font-size: 1rem;
+  }
 }
 
 .promocard__title {
-  font-size: 1rem;
+  font-size: 1em;
   font-family: $body-font-family;
-  //font-weight: $global-weight-normal;
   text-transform: uppercase;
   margin:0 0 0;
+  transition: all .2s;
+  //color:$success-color;
+  a {
+    color:inherit;
+  }
 }
 .promocard__text {
+  //color:$secondary-color;
   margin:0;
-  //font-weight: $global-weight-bold;
+  font-weight: $global-weight-bold;
+  transition: all .2s;
+  a {
+    color:inherit;
+  }
+}
+
+.promocard__subtext {
+  margin:.333em 0 0;
+  font-size: .875em;
+  line-height: 1.2;
+  //font-style: italic;
+  // &:before {
+  //   content: '\00b7';
+  //   font-weight: $global-weight-bold;
+  //   margin-right : .5em;
+  //   color: $alert-color;
+  // }
 }

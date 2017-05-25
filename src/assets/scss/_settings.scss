@@ -90,7 +90,7 @@ $breakpoints: (
   xxxlarge: 1600px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large xlarge);
+$breakpoint-classes: (small medium tablet large xlarge);
 
 // 3. The Grid
 // -----------
@@ -215,8 +215,8 @@ $accordion-content-padding: 1rem;
 // -----------------
 
 $accordionmenu-arrows: true;
-$accordionmenu-arrow-color: $primary-color;
-$accordionmenu-arrow-size: 6px;
+$accordionmenu-arrow-color: currentColor;
+$accordionmenu-arrow-size: 10px;
 
 // 9. Badge
 // --------

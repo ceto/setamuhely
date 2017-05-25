@@ -9,8 +9,8 @@
   border-top: 1px solid $light-gray;
   padding-top: 1.25rem;
   @include breakpoint(medium) {
-    background-color: $light-gray;
-    //box-shadow: 0 0 1.5rem 0 rgba(#000,.0875);
+    background-color: scale-color($light-gray, $lightness: $callout-background-fade);
+    box-shadow: 0 0 .25rem 0 rgba(#000,.0875);
     margin: 0 auto 1.75rem;
     border:none;
     padding: 0;
@@ -23,7 +23,7 @@
 
 .eventcard__peak {
   @include clearfix();
-  background-color: $primary-color;
+  background-color: $alert-color;
   float:right;
   width: 6rem;
   @include breakpoint(medium) {
@@ -42,10 +42,16 @@
 .eventcard__date {
   float: left;
   max-width: calc(100% - 18rem);
+  //color:$secondary-color;
+
   @include breakpoint(medium) {
     max-width: none;
     width:6rem;
     left:0;
+  }
+
+  .datebox {
+      background-color: inherit;
   }
 }
 
@@ -94,8 +100,11 @@
 }
 .eventcard__title {
   font-size: 1.25rem;
-  margin:0 0 .75em;
-  color:$primary-color;
+  margin:0 0 1em;
+  //color:$primary-color;
+  //text-transform: uppercase;
+  font-family: $body-font-family;
+  //opacity: .875;
   @include breakpoint(medium) {
     font-size: 1.333rem;
   }
@@ -106,13 +115,14 @@
     color:inherit;
   }
   small {
-    margin-top: .875em;
+    text-transform: none;
+    margin-top: .75em;
     font-family: $body-font-family;
     //font-weight: $global-weight-normal;
     display: block;
-    font-size: .875em;
-    color:$secondary-color;
-
+    font-size: .75em;
+    //color:$body-font-color;
+    color:inherit;
   }
 
 }

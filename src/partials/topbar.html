@@ -1,10 +1,10 @@
 <nav class="topbar">
-    <div class="row column">
+    <div class="row column expanded">
         <div class="topbar__inner">
             <div class="topbar__home">
                 <a href="{{root}}/" class="sitelogo">Sétaműhely</a>
             </div>
-            <div class="topbar__mainnav">
+            <div class="topbar__mainnav show-for-tablet">
                 <ul class="menu dropdown menu--main" data-dropdown-menu data-click-open="true" data-disable-hover="true">
                     <li><a href="{{root}}/archive-walk.html">Séták</a></li>
                     <li><a href="{{root}}/archive-event.html">Időpontok</a></li>
@@ -23,6 +23,9 @@
                         </ul>
                     </li>
                 </ul>
+            </div>
+            <div class="topbar__mobileblock hide-for-tablet">
+                <button type="button" class="menutoggler" data-toggle="mobilenavcanvas"></button>
             </div>
         </div>
     </div>
