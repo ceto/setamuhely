@@ -1,61 +1,81 @@
+.walk__head {
+  //padding:4vw 0;
+}
 .walk__presents {
   font-family: $header-font-family;
   font-weight: $global-weight-bold;
-  font-size: 1.5rem;
-  color: $primary-color;
-  margin:0;
+  font-size: .875rem;
+  margin:0 0 .75em 0;
+  text-transform: capitalize;
+  display: inline-block;
+  line-height: 1.2;
+
   span {
     font-style: italic;
+    text-transform: lowercase;
+    font-family: $body-font-family;
     font-weight: $global-weight-normal;
-    font-size: .666em;
-    color:$body-font-color;
+    font-size: .75em;
+    //color:$alert-color;
+  }
+
+  &:after {
+    content: '';
+    margin-top: .333em;
+    display: block;
+    background-color: $alert-color;
+    width:100%;
+    max-width: 1.75em;
+    height:.25em;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 1.125rem;
   }
 }
 .walk__title {
-  //color:$primary-color;
+  //font-family: $body-font-family;
+  //font-weight: $global-weight-normal;
+  font-size: 1.5rem;
+  margin:0 0 .125em 0;
+  @include breakpoint(tablet) {
+    font-size:2.5rem;
+  }
 
 }
 
 .walk__subtitle {
   font-family: $body-font-family;
   font-weight: $global-weight-normal;
+  font-size: 1.125rem;
+  @include breakpoint(tablet) {
+    font-size: 1.75rem;
+  }
+
 }
 
 .walk__banner {
   @include clearfix();
-  background-color: $light-gray;
+  background-color: $medium-gray;
   //color:$white;
-  @include breakpoint('medium') {
-    background-image: linear-gradient(180deg, $alert-color 6.25rem, transparent 6.25rem );
-  }
+  // @include breakpoint('medium') {
+  //   background-image: linear-gradient(180deg, $dark-gray 6.25rem, transparent 6.25rem );
+  // }
 }
 
 .walk__banner__one {
-  @include breakpoint('medium') {
+  @include breakpoint('tablet') {
     float:left;
     width:50%;
-    padding-right: .9375rem;
+    border-right: .5rem solid $white;
   }
-  // @include breakpoint('large') {
-  //   width:60%;
-  // }
-  // @include breakpoint('xxxlarge') {
-  //   width:50%;
-  // }
-
 }
 .walk__banner__two {
-  @include breakpoint('medium') {
-    float:left;
+  @include breakpoint('tablet') {
+    float:right;
     width:50%;
-    max-width: $global-width/2;
+    border-left: .5rem solid $white;
   }
-  // @include breakpoint('large') {
-  //   width:40%;
-  // }
-  // @include breakpoint('xxxlarge') {
-  //   width:50%;
-  // }
 }
 
 .walk__herofig {
@@ -73,14 +93,25 @@
 }
 
 
-.walk__lead {
-  p {
-    font-size: 1.75em;
-    font-weight: $global-weight-bold;
-  }
-}
+
 .walk__important {
-  background-color: $alert-color;
+  background-color: $dark-gray;
   color:#fff;
   padding:1rem 0;
+}
+
+
+.walk__lead {
+  font-size: 1.125rem;
+  font-weight: $global-weight-bold;
+
+  @include breakpoint('tablet') {
+    font-size: 1.333rem;
+  }
+  @include breakpoint('large') {
+    font-size: 1.5rem;
+  }
+  p {
+    margin-bottom: 0;
+  }
 }

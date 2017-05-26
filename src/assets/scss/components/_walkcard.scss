@@ -12,6 +12,9 @@
   }
 }
 
+.walkcard__fig {
+  //display: none;
+}
 .walkcard__img {
   img {
     display: block;
@@ -53,6 +56,10 @@
   }
   a {
     color:inherit;
+    &:hover, &:focus {
+      //color:$primary-color;
+      //text-decoration: underline;
+    }
   }
 }
 .walkcard__subtitle {
@@ -77,7 +84,7 @@
 }
 
 .walkcard__foot {
-  padding:0 0 1rem 0;
+  padding:.5rem 0 1rem 0;
 
   .button {
     margin-bottom: 0;

@@ -115,6 +115,10 @@
   }
   a {
     color:inherit;
+    &:hover, &:focus {
+      color:$primary-color;
+      //text-decoration: underline;
+    }
   }
   small {
     text-transform: none;

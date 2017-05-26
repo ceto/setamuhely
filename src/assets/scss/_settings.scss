@@ -56,7 +56,7 @@ $foundation-palette: (
   warning: #FCD01F,
   alert: #DD397C,
 );
-$light-gray:  #F4F5F6;
+$light-gray:  #F4F5F6; $extralight-gray: scale-color($light-gray, $lightness: 50%);
 $medium-gray: #dcdcdc;
 $dark-gray: #5b5e61;
 $black: #1A1918;
@@ -145,7 +145,7 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $secondary-color;
+$anchor-color: $alert-color;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;

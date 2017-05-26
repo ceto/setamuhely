@@ -1,14 +1,14 @@
 .datebox {
   display: block;
   position: relative;
-  background-color: $primary-color;
+  background-color: $alert-color;
   font-size: 1rem;
   line-height: 1;
   padding: .875em .75em 3.75em;
   width:8.5em;
   color:$white;
   &:hover {
-    background-color: $success-color;
+    background-color: $anchor-color-hover;
   }
 }
 .datebox--mini {
@@ -70,7 +70,7 @@
   margin-top: .5em;
   position: absolute;
   left: 1em;
-  bottom:2em;
+  bottom:2.5em;
   font-size: .75em;
   //display: inline-block;
   //padding:.5em .5em .25em;
@@ -96,7 +96,7 @@
 
   span {
     position: absolute;
-    bottom:.333em;
+    bottom:.75em;
     left: .75em;
     //display: inline-block;
     //padding:.5em .5em .25em;

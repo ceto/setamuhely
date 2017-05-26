@@ -3,15 +3,6 @@
   color:$white;
   padding:8rem 0 4rem 0;
   background-color: #000;
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    left:0;top:0;
-    width:100%;
-    height: 100%;
-    background-image: linear-gradient(180deg, rgba(#000, 0) 25%, rgba(#000, .25) 100%);
-  }
   @include breakpoint(large) {
     padding-top:20vw;
     padding-bottom: 6vw;
@@ -102,8 +93,8 @@
   font-size: 1.5rem;
   line-height: 1.2;
   text-transform: uppercase;
-  font-family: $body-font-family;
-  font-weight: $global-weight-normal;
+  font-family: $header-font-family;
+  font-weight: $global-weight-bold;
   margin:0 0 .125em;
   max-width: 50rem;
   @include breakpoint(large) {
@@ -129,8 +120,15 @@
   letter-spacing: .05em;
   pointer-events: auto;
   line-height: 1;
-  &:hover, &:focus {
+
+  &:focus {
+    color:inherit;
+  }
+  &:hover {
     color:$alert-color;
+    &:before {
+      color:$white;
+    }
   }
   &:before {
     display: inline-block;
@@ -141,38 +139,13 @@
   }
 }
 
+.hero__action--down {
+  &:before {
+  }
+}
+
 .heroplus {
   padding:2rem 0 2rem;
   border-bottom: 1px solid $light-gray;
 }
-.heroplus__inner {
-  max-width: $grid-row-width;
-  margin:0 auto;
-}
 
-.heroplus__gridder {
-  position: relative;
-  padding: 0 map-get($grid-column-gutter,small)/2;
-  @include breakpoint(medium) {
-    padding: 0 map-get($grid-column-gutter,medium)/2;
-  }
-  @include breakpoint(large) {
-    padding: 0 map-get($grid-column-gutter,large)/2;
-  }
-}
-
-.heroplus__title {
-  font-weight: $global-weight-normal;
-  font-family: $body-font-family;
-  text-transform: uppercase;
-  margin:0 0 .75em;
-  @include breakpoint(large) {
-    font-size: 1.25rem;
-  }
-  > a {
-    color:inherit;
-    &:after {
-      content:' >';
-    }
-  }
-}

@@ -11,7 +11,7 @@
   @include clearfix();
   //padding:.75rem 0;
   max-width: 30rem;
-  background-color: scale-color($light-gray, $lightness: 50%);
+  background-color: $extralight-gray;
   border:1px solid $light-gray;
   &:hover {
     .drivercard__photo {

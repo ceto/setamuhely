@@ -1,13 +1,32 @@
 .facts {
-  list-style-type: none;
+  @include clearfix();
+  list-style: none;
   margin:0;
   padding:0;
-  font-weight: $global-weight-bold;
-  font-size: 1.35rem;
-  > li {
-    display: inline-block;
-    width:48%;
-    margin:0; padding:0;
-  }
+  font-size: 1rem;
 
+  //font-weight: $global-weight-bold;
+  line-height: 1;
+  //font-family: $header-font-family;
+  //font-variant: small-caps;
+  //text-transform: uppercase;
+}
+
+.facts > li {
+    display: block;
+    padding:1.25% 10% 1.25% 0;
+    float:left;
+    min-width:50%;
+    @include breakpoint(large) {
+      min-width:0;
+    }
+
+}
+
+.facts__value {
+  font-size: 1.25em;
+  display: block;
+  margin-top: .2em;
+  font-weight: $global-weight-bold;
+  font-family: $body-font-family;
 }

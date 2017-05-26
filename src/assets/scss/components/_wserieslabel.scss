@@ -1,5 +1,6 @@
 .wserieslabel {
   font-variant: small-caps;
+  text-transform: capitalize;
   background-color: $secondary-color;
   padding:.25em .666em .333em;
   border-radius: 3px;
@@ -14,3 +15,4 @@
     color: inherit;
   }
 }
+

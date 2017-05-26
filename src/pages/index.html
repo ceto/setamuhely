@@ -12,23 +12,24 @@
         <a href="single-walk.html" class="hero__action">Ismerd meg a részleteket</a>
     </div>
 </section>
-<section class="heroplus">
-    <div class="heroplus__inner">
-        <div class="heroplus__gridder">
-            <h3 class="heroplus__title"><a href="archive-walk.html">Legnépszerűbb séták</a></h3>
-        </div>
-
-        <div class="promoted">
-            <ul class="promoted__list">
-                <li>{{> promocard }}</li>
-                <li>{{> promocard2 }}</li>
-                <li>{{> promocard3 }}</li>
-            </ul>
+<section class="home__featured ps ps--narrow">
+    <header class="sectionheader">
+        <h3 class="sectionheader__title">Legnépszerűbb séták</h3>
+        <nav class="sectionheader__nav"><a class="showall" href="{{root}}/archive-walk.html">Mutasd mind</a></nav>
+    </header>
+    <div class="row collapse large-uncollapse">
+        <div class="columns">
+            <div class="promoted">
+                <ul class="promoted__list">
+                    <li>{{> promocard }}</li>
+                    <li>{{> promocard2 }}</li>
+                    <li>{{> promocard3 }}</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
-<section class="wseries ps">
-    <header class="wseries__head">
+<section class="home__welcome ps ps--extralight">
         <div class="row">
             <div class="columns large-8">
                 <h2 class="wseries__title">Helló! Van egy csomó jó sztorink. Sétálj velünk és elmeséljük!</h2>
@@ -36,23 +37,19 @@
                 <a href="{{root}}/archive-walk.html" class="button alert">Ismerd meg sétáinkat</a>
             </div>
             <div class="columns large-4">
-
             </div>
         </div>
-    </header>
 </section>
-<section class="eventlist ps ps--narrow">
+<section class="home__eventlist ps ps--narrow">
+    <header class="sectionheader">
+        <h3 class="sectionheader__title">Ezekre még odaérsz</h3>
+        <nav class="sectionheader__nav"><a class="showall" href="{{root}}/archive-event.html">Ugrás a naptárra</a></nav>
+    </header>
     <div class="row column">
-        <h3 class="heroplus__title"><a href="archive-event.html">Sétaidőpontok</a></h3>
-    </div>
-    <div class="row columns">
         {{> eventcard}}
         {{> eventcard2}}
         {{> eventcard3}}
         {{> eventcard}}
-    </div>
-    <div class="row column text-center ps ps--narrow">
-        <a href="{{root}}/archive-event.html" class="button secondary hollow">Mutasd mindet</a>
     </div>
 </section>
 <!-- <section class="bigpromo">
