@@ -2,18 +2,38 @@
   @include clearfix();
   white-space: normal;
   position: relative;
-  //border:1px solid $light-gray;
-  //background-color: rgba($white,.5);
-  //box-shadow: 0 0 1.5rem 0 rgba(#000,.0875);
   transition: box-shadow .2s ;
   &:hover {
-    //background-color: #fff;
-    //box-shadow: 0 0 1.5rem 0 rgba(#000,.125);
+    .walkcard__title, {
+      color:$primary-color;
+    }
+    .walkcard__text {
+      //color:$secondary-color;
+    }
+    // .walkcard__fig {
+    //   filter:none;
+    // }
+    .walkcard__fig:before {
+      opacity: 0;
+    }
   }
 }
 
 .walkcard__fig {
-  //display: none;
+  position: relative;
+  //filter: grayscale(1);
+  &:before {
+    content:'';
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(to bottom,transparent 0,rgba(0,0,0,.15) 50%,rgba(0,0,0,.25) 100%);
+    pointer-events: none;
+    transition: opacity .2s;
+  }
+
 }
 .walkcard__img {
   img {
@@ -24,12 +44,6 @@
 .walkcard__head {
   position: relative;
   padding: 1rem 0 .5rem;
-  //height:3.875rem;
-  //background-color: $medium-gray;
-
-  //color:$white;
-  //color:$primary-color;
-  //border-bottom:1px solid $light-gray;
 }
 
 .walkcard__presents {
@@ -44,21 +58,17 @@
 }
 
 .walkcard__title {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin:0 0 .25em;
   text-transform: uppercase;
-  //color:$body-font-color;
   font-family: $body-font-family;
-  //max-height: 2.75rem;
-  //background-color: red;
   @include breakpoint(xlarge) {
     //font-size: 1.333rem;
   }
   a {
     color:inherit;
     &:hover, &:focus {
-      //color:$primary-color;
-      //text-decoration: underline;
+
     }
   }
 }

@@ -39,7 +39,7 @@
   font-weight: $global-weight-bold;
 }
 .promocard__body {
-  padding:.75rem 1em;
+  padding:.75rem 5%;
   font-size: .875rem;
   @include breakpoint(large) {
     font-size: 1rem;
@@ -47,7 +47,7 @@
 }
 
 .promocard__title {
-  font-size: 1em;
+  font-size: 1rem;
   font-family: $body-font-family;
   text-transform: uppercase;
   margin:0 0 0;
@@ -71,11 +71,4 @@
   margin:.333em 0 0;
   font-size: .875em;
   line-height: 1.2;
-  //font-style: italic;
-  // &:before {
-  //   content: '\00b7';
-  //   font-weight: $global-weight-bold;
-  //   margin-right : .5em;
-  //   color: $alert-color;
-  // }
 }

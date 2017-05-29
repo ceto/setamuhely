@@ -15,7 +15,10 @@
 }
 
 .wseries__head {
-
+  @include grid-column-row();
+  @include breakpoint(large) {
+    padding-right: $global-width*0.33333;
+  }
 }
 .wseries__shorttitle {
   font-size: .875rem;
@@ -55,6 +58,21 @@
   }
 }
 
+.wseries__description {
+  @include grid-column-row();
+  @include breakpoint(large) {
+    padding-right: $global-width*0.33333;
+  }
+}
+
+.wseries__moreinfo {
+  font-size: .75em;
+  font-weight: $global-weight-bold;
+  color:inherit;
+  &:after {
+    content: ' \00bb';
+  }
+}
 .wseries__items {
   max-width: $grid-row-width;
   margin:0 auto;

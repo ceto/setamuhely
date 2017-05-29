@@ -58,7 +58,7 @@ legend {
   left:auto !important;
 }
 .reveal__header{
- background-color: $primary-color;
+ background-color: $alert-color;
  margin-left:-$global-padding*2;
  margin-right:-$global-padding*2;
  margin-top:-$global-padding;
@@ -73,19 +73,12 @@ legend {
 
  // Blockquotes
   blockquote {
-    // margin: 0 0 $paragraph-margin-bottom;
-    // padding: $blockquote-padding;
-    // border-#{$global-left}: $blockquote-border;
+
     padding-left: 15%;
     text-align: right;
 
     &, p {
-      font-size: 1.25rem;
-      //font-family: $header-font-family;
-      //font-style: italic;
-      //font-weight: $global-weight-bold;
-      // line-height: $paragraph-lineheight;
-      // color: $blockquote-color;
+      font-size: 1.125rem;
 
     }
   }

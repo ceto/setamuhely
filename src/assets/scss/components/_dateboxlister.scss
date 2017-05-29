@@ -1,15 +1,55 @@
 .dateboxlister {
-  width:100%;
-  list-style-type: none;
-  margin:0;
-  padding:0;
+  max-width: $global-width;
+  margin:0 auto;
   font-size: 0;
+  padding: 0 map-get($grid-column-gutter,small)/2;
+  list-style: none;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
-  overflow-x: scroll; /* has to be scroll, not auto */
+
   -webkit-overflow-scrolling: touch;
-  > li {
-    font-size: 1rem;
-    display: inline-block;
-    margin:0 1rem 0 0;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar {
+      display: none;
   }
+
+  @include breakpoint(medium) {
+    padding: 0 map-get($grid-column-gutter,medium)/2;
+  }
+
+  @include breakpoint(large) {
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // overflow-x: visible;
+    // overflow-y: inherit;
+    // word-wrap: normal;
+    // white-space: normal;
+    padding: 0 map-get($grid-column-gutter,large)/4*3;
+  }
+}
+
+.dateboxlister > li {
+    white-space: normal;
+    font-size: 1rem;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 map-get($grid-column-gutter,small)/2 0 0;
+    padding:0 0;
+    width: rem-calc(130);
+    @include breakpoint(medium) {
+      margin-right:map-get($grid-column-gutter,medium)/2;
+    }
+
+    &:last-child() {
+      margin-right: 0;
+    }
+
+
 }

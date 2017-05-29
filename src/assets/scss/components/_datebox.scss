@@ -4,11 +4,17 @@
   background-color: $alert-color;
   font-size: 1rem;
   line-height: 1;
-  padding: .875em .75em 3.75em;
-  width:8.5em;
+  padding: .875em .75em 3.875em;
+  width:100%;
   color:$white;
   &:hover {
     background-color: $anchor-color-hover;
+  }
+}
+.datebox--secondary  {
+  background-color: $dark-gray;
+  &:hover {
+    background-color: $black;
   }
 }
 .datebox--mini {
@@ -26,17 +32,7 @@
     text-align: left;
   }
 }
-.datebox__globalinfo {
-  position: absolute;
-  top:.75em;
-  right:0;
-  font-size: .75em;
-  display: inline-block;
-  padding:.5em .5em .25em;
-  font-weight: $global-weight-bold;
-  background-color: $warning-color;
-  //color:$primary-color;
-}
+
 .datebox time {
   display: block;
   font-weight: $global-weight-bold;
@@ -49,7 +45,6 @@
 .datebox__day {
   display: block;
   font-size: 2.25em;
-  margin-top: .125em;
   .datebox--mini & {
     font-size: 1.5em;
     @include breakpoint(medium) {
@@ -70,15 +65,23 @@
   margin-top: .5em;
   position: absolute;
   left: 1em;
-  bottom:2.5em;
+  bottom:2.75em;
   font-size: .75em;
-  //display: inline-block;
-  //padding:.5em .5em .25em;
   font-weight: $global-weight-normal;
   font-style: italic;
-  //background-color: $secondary-color;
-  //color:$white;
 }
+
+.datebox__smallinfo--accent {
+  display: inline-block;
+  font-size: .75em;
+  background-color: $warning-color;
+  font-weight: $global-weight-bold;
+  font-style: normal;
+  text-transform: uppercase;
+  color:$alert-color;
+  padding:.125em;
+}
+
 
 .datebox__action {
   position: absolute;
@@ -96,12 +99,11 @@
 
   span {
     position: absolute;
-    bottom:.75em;
+    bottom:1em;
     left: .75em;
-    //display: inline-block;
-    //padding:.5em .5em .25em;
-    //background-color: $success-color;
     font-weight: $global-weight-bold;
-    //color:$white;
+    &:after {
+      content: ' \00bb';
+    }
   }
 }

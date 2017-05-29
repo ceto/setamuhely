@@ -56,17 +56,19 @@
 
 .walk__banner {
   @include clearfix();
+  position: relative;
+  //background-color: $warning-color;
   background-color: $medium-gray;
-  //color:$white;
-  // @include breakpoint('medium') {
-  //   background-image: linear-gradient(180deg, $dark-gray 6.25rem, transparent 6.25rem );
-  // }
 }
 
 .walk__banner__one {
   @include breakpoint('tablet') {
-    float:left;
+    position: absolute;
     width:50%;
+    height:100%;
+    left:0;
+    top:0;
+
     border-right: .5rem solid $white;
   }
 }
@@ -98,12 +100,106 @@
   background-color: $dark-gray;
   color:#fff;
   padding:1rem 0;
+  padding-left: map-get($grid-column-gutter,small)/2;
+  @include breakpoint('medium') {
+    padding-left: map-get($grid-column-gutter,medium)/2;
+  }
+  @include breakpoint('large') {
+    padding: 1.25vw 0;
+    padding-left: map-get($grid-column-gutter,large)/4*3;
+  }
 }
 
+.walk__events {
+  padding:1.5rem 0;
+  @include breakpoint('large') {
+    padding: 2vw 0;
+  }
+}
+
+.walk__events__title {
+  font-size: 1.25rem;
+  margin:0 0 .875em;
+  padding-left: map-get($grid-column-gutter,small)/2;
+  //font-family: $body-font-family;
+  //color:$alert-color;
+  @include breakpoint('medium') {
+    padding-left: map-get($grid-column-gutter,medium)/2;
+  }
+  @include breakpoint('large') {
+    padding-left: map-get($grid-column-gutter,large)/4*3;
+    font-size: 1.5rem;
+  }
+
+  span {
+    display: block;
+    font-size: .75em;
+    font-family: $body-font-family;
+    font-weight: $global-weight-normal;
+  }
+}
+
+.walk__afterbanner {
+  border-bottom: 1px solid $light-gray;
+}
+
+.walk__extras {
+  h3 {
+    font-size: 1rem;
+    font-weight: $global-weight-normal;
+    font-family: $body-font-family;
+    //text-transform: uppercase;
+
+    margin:0 0;
+  }
+  p {
+    font-size: 1.25rem;
+    font-weight: $global-weight-bold;
+    margin:0;
+  }
+  span {
+    display: block;
+    font-size: .875rem;
+    font-weight: $global-weight-normal;
+    line-height: $header-lineheight;
+    color:$body-font-color;
+  }
+  & + & {
+    &:before {
+      content: '';
+      margin: $paragraph-margin-bottom 0;
+      display: block;
+      background-color: $alert-color;
+      width:100%;
+      max-width: 2.5em;
+      height:.333em;
+    }
+
+  }
+}
+
+.walk__extras--list {
+  p {
+    //font-size: 1.125rem;
+    text-transform: capitalize;
+  }
+}
+.walk__loc__maplink {
+  &:after {
+    content: ' \00bb';
+  }
+}
+
+.walk__globalquote {
+  padding: 0;
+  &, & p {
+  }
+}
 
 .walk__lead {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: $global-weight-bold;
+
 
   @include breakpoint('tablet') {
     font-size: 1.333rem;

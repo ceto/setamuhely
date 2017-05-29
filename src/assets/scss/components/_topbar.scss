@@ -1,18 +1,15 @@
 .topbar {
-  //background-color: $extralight-gray;
-  //background-color:#fff;
+  @include grid-column-row();
+  max-width: none;
   border-bottom: 1px solid $light-gray;
-  //box-shadow: 0 0 1px 0 rgba(#000, .0125);
-  // > .row {
-  //   @include breakpoint(xxlarge) {
-  //     max-width: none;
-  //   }
-  // }
 }
 .topbar__inner {
-  height:5rem;
+  height:3rem;
   position: relative;
   z-index: 1;
+  @include breakpoint(large) {
+    height:5rem;
+  }
 }
 .topbar__home {
   position: absolute;
@@ -23,8 +20,8 @@
 .sitelogo {
   display: block;
   overflow: hidden;
-  width: 9.5rem;
-  height: 3rem;
+  width: 7rem;
+  height: 2.125rem;
   //background-color: red;
   white-space: nowrap;
   text-indent: 200%;
@@ -32,6 +29,10 @@
   background-repeat: no-repeat;
   background-position: 0;
   background-size: auto 100%;
+  @include breakpoint(large) {
+    height:3rem;
+    width: 9.5rem;
+  }
 }
 .topbar__mainnav {
   position: absolute;
@@ -46,5 +47,5 @@
   right: 0;
 }
 .menutoggler {
-  @include hamburger($anchor-color, scale-color($alert-color, $lightness: -14%), 34px, 24px, 1px, 3);
+  @include hamburger($anchor-color, scale-color($alert-color, $lightness: -14%), 30px, 20px, 1px, 3);
 }
