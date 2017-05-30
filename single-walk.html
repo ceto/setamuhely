@@ -54,7 +54,7 @@
                                 <img src="assets/img/9k-169.jpg" alt="">
                             </figure>
                         </div>
-                        <div class="walk__banner__two" data-equalizer-watch>
+                        <div id="ticketblock" class="walk__banner__two" data-equalizer-watch data-magellan-target="ticketblock">
                             <div class="walk__important">
                                 <ul class="facts">
                                     <li>Séta ára <span class="facts__value">2500 / 3800&nbsp;Ft.</span></li>
@@ -122,22 +122,40 @@
                             </div>
                         </div>
                     </section>
-                    <section class="walk__lead ps ps--narrow">
+                    <section class="walk__lead ps ps--narrow ps--nobottom">
                         <div class="row column">
                             <p>Zacskós tejet a Közértből? Kétforintost az utcai telefonfülkébe? Miért lesz Szomszédok-rajongó egy mai huszonéves? Talán azért, mert a népszerű teleregény bepillantást ad a késői Kádár-korszak mindennapjaiba, amiben szülei éltek?</p>
                         </div>
                     </section>
                     <section class="walk__main ps ps--notop">
                         <div class="row">
-                            <div class="columns large-8">
+                            <div class="columns large-8 ps ps--narrow bodycopy">
                                 <p>A budapesti lakótelepek egyik legelegánsabbja a gazdagréti, amit még Gorbacsov felesége is kitüntetett látogatásával 1986-ban. Itt forgatták közel 13 éven keresztül a mára már kultikussá vált sorozat epizódjait. Sétánkon ellátogatunk a volt forgatási helyszínekre, hogy megtudjuk mi változott a rendszerváltás óta.</p>
-                                <h3>Kultikus helyszinekre is bejutsz velünk</h3>
+                                <h2>Kultikus helyszinekre is bejutsz velünk</h2>
                                 <p>Megtekintjük a postát, aminek kirablását Kutya úr megakadályozta. Meglátogatjuk az iskolát, ahol Vágási Jutka tanított. A tanáriban szinte most is ugyanaz a berendezés, és az udvaron is ott a focipálya, ahol Vágási Feri rúgta a gólokat. Az aradi vértanúk emlékére ültetett fák viszont nagyot nőttek azóta, és a templomot is felújították, aminek kriptájában Laci atya nyugszik.</p>
+                                <blockquote>
+                                    <p>Lórum ipse olyan borzasztóan bálós nustabság, ami gondat nélkül nem tozik megfelelően egy falan szerint.</p>
+                                    <cite>Lénárd Anna</cite>
+                                </blockquote>
                                 <p>A lakótelepen végigsétálva megtudjuk, hogyan alakították ki Juli kozmetikaszalonját. Utunkat a híresneves Muskátli presszóban fejezzük be, ahol annak idején nemcsak a szereplők, de a stáb is kipihente a napi fáradalmakat.</p>
+                                <ol>
+                                    <li>Hiva hat a szapós köter buca, kula, saró.</li>
+                                    <li>Az ötet négy lékes táspaszaka a fríz, petnyik, dalgályozok, harkádok ezek főzik meg</li>
+                                    <li>Torsósításában szédugta a spály, emlösz (fedős) valamint a párt köző szenóm (ötet) ditátusát.</li>
+                                    <li>Jelenleg még mindig a petnyikre és dalgályozokra gatos pikkelyes szőce odossága a csetlensetes.</li>
+                                </ol>
+                                <p>Zürjés ütlelést pallik és arra felé ingál amerről azt reszti. Metles ilyen fiatalon kodnia, hogy nem minden művenc és gatlan. Sok falozás harása és szerdobája váztatna plembe ha nem. A kulán aggott bengések voltak 55 vicája cseppedrő újra pipítgatották a szalmi kezéseket, azzal a műtlepéssel, hogy anyagigásban még 3 kövezést, kezés és menzés oxid vadékos tültézt.</p>
+                                <h3>Hármas címsor így néz ki</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vel deserunt repudiandae, quo soluta rerum sapiente dolor, eveniet molestiae, maxime nam debitis consequuntur officia nemo ex molestias sequi itaque delectus.</p>
+                                <ul>
+                                    <li>Hiva hat a szapós köter buca, kula, saró.</li>
+                                    <li>Az ötet négy lékes táspaszaka a fríz, petnyik, dalgályozok, harkádok ezek főzik meg</li>
+                                    <li>Torsósításában szédugta a spály, emlösz (fedős) valamint a párt köző szenóm (ötet) ditátusát.</li>
+                                    <li>Jelenleg még mindig a petnyikre és dalgályozokra gatos pikkelyes szőce odossága a csetlensetes.</li>
+                                </ul>
                                 <p>A túra az MTVA támogatásával jött létre. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit pariatur sit asperiores consequuntur odio, ullam sint sed beatae. At natus architecto sint, delectus eius amet placeat earum incidunt cupiditate provident.</p>
-                                <a href="#" class="button alert">Válassz időpontot</a>
                             </div>
-                            <div class="columns large-4">
+                            <div class="columns large-4 ps ps--narrow">
                                 <h3 class="widget__title">A sétát vezeti</h3>
                                 <ul class="dclist">
                                     <li>
@@ -222,64 +240,14 @@
                         </div>
                     </footer>
                 </article>
-                <aside class="reveal" id="addtocartModal" data-reveal>
-                    <header class="reveal__header">
-                        <h6>Választott sétád</h6>
-                        <h2>Gazdagréten a szomszédokkal</h2>
-                        <p class="lead">2017. április 15. csütörtök - 16:00</p>
-                    </header>
-                    <!-- <h5>Az alábbi jegyeket kérem</h5> -->
-                    <form id="ticketform" action="#">
-                        <ul class="ticketlist">
-                            <li class="ticket" id="ticket-01">
-                                <div class="ticket__namewrap">
-                                    <label class="ticket__name" for="conference-2017-1-ticket-01">
-                                        Diák/Nyugdíjas
-                                    </label>
-                                </div>
-                                <div class="ticket__pricequantitywrap">
-                                    <div class="ticket__pricequantity">
-                                        <div class="ticket__price">
-                                            <span class="ticket__price__costs">2 500 Ft</span>
-                                        </div>
-                                        <div class="ticket__quantity ">
-                                            <input min="0" pattern="^[1-9]\d*$" autocomplete="off" class="ticket__quantityfield" aria-describedby="ticket__description-01" id="conference-2017-1-ticket-01" name="registration[release_ids][01]" placeholder="0" type="number">
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="ticket" id="ticket-02">
-                                <div class="ticket__namewrap">
-                                    <label class="ticket__name" for="conference-2017-1-ticket-02">
-                                        Normál/Felnőtt
-                                    </label>
-                                </div>
-                                <div class="ticket__pricequantitywrap">
-                                    <div class="ticket__pricequantity">
-                                        <div class="ticket__price">
-                                            <span class="ticket__price__costs">3 500 Ft</span>
-                                        </div>
-                                        <div class="ticket__quantity ">
-                                            <input min="0" pattern="^[1-9]\d*$" autocomplete="off" class="ticket__quantityfield" aria-describedby="ticket__description-02" id="conference-2017-1-ticket-02" name="registration[release_ids][02]" placeholder="0" type="number">
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="formactions">
-                            <div class="formactions__action">
-                                <button class="button alert" type="submit" value="Submit">Tovább</button>
-                            </div>
-                            <div class="formactions__branding">
-                                <p class="normaltext"> </p>
-                            </div>
-                        </div>
-                    </form>
-                    <button class="close-button" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </aside>
-                <section class="ps ps--narrow ps--light">
+                <div class="ps ps--narrow ps--extralight ps--bordered" data-magellan>
+                    <div class="row column">
+                        <h3 class="nicetitle nicetitle--withbutton">Mehetünk? Sétára fel!<span>Vedd meg sétajegyed online</span></h3>
+                        <a href="#ticketblock" class="button alert">Válassz időpontot</a>
+                    </div>
+                </div>
+                
+                <section class="ps ps--narrow">
                     <header class="sectionheader">
                         <h3 class="sectionheader__title">Ajánljuk még figyelmedbe</h3>
                         <nav class="sectionheader__nav"><a class="showall" href="/archive-walk.html">Összes séta</a></nav>
@@ -336,6 +304,65 @@
                 </li>
                     </ul>
                 </section>
+                
+                <aside class="reveal reveal--nopad" id="addtocartModal" data-reveal>
+                    <header class="reveal__header">
+                        <p class="reveal__pretitle">Választott sétád</p>
+                        <h3 class="reveal__title">Gazdagréten a szomszédokkal</h3>
+                        <p class="reveal__posttitle">2017. április 15. csütörtök - 16:00</p>
+                    </header>
+                    <div class="reveal__body">
+                        <form id="ticketform" action="#">
+                            <ul class="ticketlist">
+                                <li class="ticket" id="ticket-01">
+                                    <div class="ticket__namewrap">
+                                        <label class="ticket__name" for="conference-2017-1-ticket-01">
+                                            Diák/Nyugdíjas
+                                        </label>
+                                    </div>
+                                    <div class="ticket__pricequantitywrap">
+                                        <div class="ticket__pricequantity">
+                                            <div class="ticket__price">
+                                                <span class="ticket__price__costs">2 500 Ft</span>
+                                            </div>
+                                            <div class="ticket__quantity ">
+                                                <input min="0" pattern="^[1-9]\d*$" autocomplete="off" class="ticket__quantityfield" aria-describedby="ticket__description-01" id="conference-2017-1-ticket-01" name="registration[release_ids][01]" placeholder="0" type="number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="ticket" id="ticket-02">
+                                    <div class="ticket__namewrap">
+                                        <label class="ticket__name" for="conference-2017-1-ticket-02">
+                                            Normál/Felnőtt
+                                        </label>
+                                    </div>
+                                    <div class="ticket__pricequantitywrap">
+                                        <div class="ticket__pricequantity">
+                                            <div class="ticket__price">
+                                                <span class="ticket__price__costs">3 500 Ft</span>
+                                            </div>
+                                            <div class="ticket__quantity ">
+                                                <input min="0" pattern="^[1-9]\d*$" autocomplete="off" class="ticket__quantityfield" aria-describedby="ticket__description-02" id="conference-2017-1-ticket-02" name="registration[release_ids][02]" placeholder="0" type="number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="formactions">
+                                <div class="formactions__action">
+                                    <button class="button alert" type="submit" value="submit">Tovább</button>
+                                </div>
+                                <div class="formactions__instruction">
+                                    <p>Sétautalvánnyal történő ingyenes vásárlásról a későbbiekben fogsz nyilatkozni</p>
+                                </div>
+                            </div>
+                        </form>
+                        <button class="close-button" data-close aria-label="Close modal" type="button">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </aside>
                 <footer class="sitefooter ps ps--narrow">
                   <div class="row column">&copy; 2017 Sétaműhely Kft. Minden jog fenntartva.</div>
                 </footer>
