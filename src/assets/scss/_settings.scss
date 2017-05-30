@@ -117,17 +117,17 @@ $header-lineheight: 1.2;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
+    'h1': ('font-size': 22),
+    'h2': ('font-size': 18),
     'h3': ('font-size': 18),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 18),
+    'h4': ('font-size': 16),
+    'h5': ('font-size': 16),
     'h6': ('font-size': 16),
   ),
-  medium: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 32),
-    'h3': ('font-size': 24),
+  tablet: (
+    'h1': ('font-size': 32),
+    'h2': ('font-size': 24),
+    'h3': ('font-size': 22),
     'h4': ('font-size': 20),
     'h5': ('font-size': 18),
     'h6': ('font-size': 16),
@@ -156,16 +156,16 @@ $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;
 $list-style-position: outside;
-$list-side-margin: 1.25rem;
-$list-nested-side-margin: 1.25rem;
+$list-side-margin: 1.75em;
+$list-nested-side-margin: 1.75em;
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
-$blockquote-color: $dark-gray;
-$blockquote-padding: rem-calc(0 0 0 20);
-$blockquote-border: none; //1px solid $secondary-color;
+$blockquote-color: scale-color($dark-gray, $lightness: 35%);
+$blockquote-padding: 3% 4% 3% 4%;
+$blockquote-border: none; //4px solid $alert-color;
 $cite-font-size: rem-calc(14);
-$cite-color: $dark-gray;
+$cite-color: blockquote-color;
 $cite-pseudo-content: '\2014 \0020';
 $keystroke-font: $font-family-monospace;
 $keystroke-color: $black;
@@ -365,25 +365,25 @@ $helptext-font-size: rem-calc(13);
 $helptext-font-style: italic;
 $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
-$input-prefix-border: 3px solid $dark-gray;
+$input-prefix-border: 3px solid $body-font-color;
 $input-prefix-padding: 1rem;
 $form-label-color: $black;
 $form-label-font-size: rem-calc(14);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
 $select-background: $white;
-$select-triangle-color: $dark-gray;
+$select-triangle-color: $body-font-color;
 $select-radius: 6px;
 $input-color: $body-font-color;
 $input-placeholder-color: $medium-gray;
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-font-weight: $global-weight-bold;
-$input-background: scale-color($light-gray, $lightness: 50%);
+$input-background: $extralight-gray;
 $input-background-focus: $white;
 $input-background-disabled: $light-gray;
-$input-border: 3px solid $dark-gray;
-$input-border-focus: 3px solid $primary-color;
+$input-border: 2px solid $body-font-color;
+$input-border-focus: 2px solid $primary-color;
 $input-shadow: inset 0 1px 2px rgba($black, 0.1);
 $input-shadow-focus: 0 0 3px $light-gray;
 $input-cursor-disabled: not-allowed;
@@ -505,7 +505,7 @@ $responsive-embed-ratios: (
 $reveal-background: $white;
 $reveal-width: 760px;
 $reveal-max-width: $global-width;
-$reveal-padding: $global-padding $global-padding*2;
+$reveal-padding: $global-padding $global-padding;
 $reveal-border: 0px solid $medium-gray;
 $reveal-radius: $global-radius;
 $reveal-zindex: 1005;

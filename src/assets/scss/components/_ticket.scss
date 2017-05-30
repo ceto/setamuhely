@@ -15,7 +15,7 @@
 .ticket__namewrap {
     display: table-cell;
 
-    padding: 1.75em 0 2.25em;
+    padding: 1.5em 0 2.25em;
 
     vertical-align: top;
 }
@@ -26,13 +26,14 @@
 
 .ticket__name {
     font-size: 1em;
-    font-weight: 500;
+    font-weight: $global-weight-bold;
     line-height: $header-lineheight;
 
     display: block;
 
     margin: 0;
     padding-top: .5em;
+    color:$body-font-color;
 }
 
 .ticket__description {
@@ -44,13 +45,12 @@
     margin-top: .25em;
     margin-bottom: 0;
 
-    color: #cbcbcc;
 }
 
 .ticket__pricequantitywrap {
     display: table-cell;
 
-    padding: 1.75em 0 .75em;
+    padding: 1.5em 0 .75em;
 
     text-align: right;
     vertical-align: top;
@@ -69,6 +69,7 @@
     height: 2.75em;
     padding-top: .5em;
     //background-color: red;
+    //color:$alert-color;
 }
 
 .ticket__price__costs {
@@ -111,8 +112,9 @@
     float: right;
 }
 
-.formactions__branding {
+.formactions__instruction {
     float: left;
+    font-size: .875rem;
 }
 
 

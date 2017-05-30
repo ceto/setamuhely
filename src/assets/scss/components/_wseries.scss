@@ -69,6 +69,7 @@
   font-size: .75em;
   font-weight: $global-weight-bold;
   color:inherit;
+  white-space: nowrap;
   &:after {
     content: ' \00bb';
   }

@@ -47,6 +47,14 @@ legend {
 .reveal {
   box-shadow: 0 0 2rem 0 rgba(#000,.5);
 }
+.reveal--nopad {
+  padding:0;
+  .close-button {
+    color:$white;
+    top: $global-padding*1.875;
+    right:5%;
+  }
+}
 .full.reveal--side {
   width: rem-calc(320);
   max-width: 80%;
@@ -59,37 +67,37 @@ legend {
 }
 .reveal__header{
  background-color: $alert-color;
- margin-left:-$global-padding*2;
- margin-right:-$global-padding*2;
- margin-top:-$global-padding;
- padding:$global-padding*2;
+ padding:$global-padding*2 5%;
  color:$white;
  .reveal--side &{
     background-color: $dark-gray;
  }
 }
+.reveal__pretitle {
+  margin:0 0 .75em;
+  font-weight: $global-weight-bold;
+}
+.reveal__title {
+  margin:0;
+  font-size: 1.5rem;
+}
+.reveal__posttitle {
+  margin:0;
+  font-weight: $global-weight-bold;
+  font-size: 1.125rem;
+}
+
+.reveal__body {
+  padding:$global-padding 5%;
+}
 
 
 
  // Blockquotes
-  blockquote {
-
-    padding-left: 15%;
-    text-align: right;
+blockquote {
 
     &, p {
-      font-size: 1.125rem;
-
+      font-size: 1.25rem;
     }
-  }
 
-    // Citations
-  cite {
-    // display: block;
-    // font-size: $cite-font-size;
-    // color: $cite-color;
-
-    // &:before {
-    //   content: $cite-pseudo-content;
-    // }
-  }
+}

@@ -52,6 +52,12 @@
   padding-bottom: 0;
 }
 
+.ps--bordered {
+  border-top:1px solid transparent;
+  border-bottom:1px solid transparent;
+  border-color: $light-gray;
+}
+
 .ps--opaque {
   background-color: $white;
 }
@@ -62,12 +68,13 @@
 
 .ps--light {
   background-color: $light-gray;
+  border-color: scale-color($light-gray, $lightness:-5%);
 }
 .ps--extralight {
-  background-color: scale-color($light-gray, $lightness: $callout-background-fade);
+  background-color: $extralight-gray;
 }
 
 .ps--accent {
-  background-color: $primary-color;
-  color:$body-background;
+  background-color: $warning-color;
+  //color:$body-font-color;
 }

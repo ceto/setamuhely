@@ -52,60 +52,61 @@
     </button>
 </div>
 </aside>
-<div class="reveal" id="addtocartModal" data-reveal>
-<header class="reveal__header">
-    <h6>Választott sétád</h6>
-    <h2>Ortodox zsidók Pesten</h2>
-    <p class="lead">2017. szeptember 15. csütörtök - 17:30</p>
-</header>
-<!-- <h5>Az alábbi jegyeket kérem</h5> -->
-<form id="ticketform" action="#">
-    <ul class="ticketlist">
-        <li class="ticket" id="ticket-01">
-            <div class="ticket__namewrap">
-                <label class="ticket__name" for="conference-2017-1-ticket-01">
-                    Diák/Nyugdíjas
-                </label>
-            </div>
-            <div class="ticket__pricequantitywrap">
-                <div class="ticket__pricequantity">
-                    <div class="ticket__price">
-                        <span class="ticket__price__costs">2 500 Ft</span>
+<aside class="reveal reveal--nopad" id="addtocartModal" data-reveal>
+    <header class="reveal__header">
+        <p class="reveal__pretitle">Választott sétád</p>
+        <h3 class="reveal__title">Gazdagréten a szomszédokkal</h3>
+        <p class="reveal__posttitle">2017. április 15. csütörtök - 16:00</p>
+    </header>
+    <div class="reveal__body">
+        <form id="ticketform" action="#">
+            <ul class="ticketlist">
+                <li class="ticket" id="ticket-01">
+                    <div class="ticket__namewrap">
+                        <label class="ticket__name" for="conference-2017-1-ticket-01">
+                            Diák/Nyugdíjas
+                        </label>
                     </div>
-                    <div class="ticket__quantity ">
-                        <input min="0" pattern="^[1-9]\d*$" autocomplete="off" class="ticket__quantityfield" aria-describedby="ticket__description-01" id="conference-2017-1-ticket-01" name="registration[release_ids][01]" placeholder="0" type="number">
+                    <div class="ticket__pricequantitywrap">
+                        <div class="ticket__pricequantity">
+                            <div class="ticket__price">
+                                <span class="ticket__price__costs">2 500 Ft</span>
+                            </div>
+                            <div class="ticket__quantity ">
+                                <input min="0" pattern="^[1-9]\d*$" autocomplete="off" class="ticket__quantityfield" aria-describedby="ticket__description-01" id="conference-2017-1-ticket-01" name="registration[release_ids][01]" placeholder="0" type="number">
+                            </div>
+                        </div>
                     </div>
+                </li>
+                <li class="ticket" id="ticket-02">
+                    <div class="ticket__namewrap">
+                        <label class="ticket__name" for="conference-2017-1-ticket-02">
+                            Normál/Felnőtt
+                        </label>
+                    </div>
+                    <div class="ticket__pricequantitywrap">
+                        <div class="ticket__pricequantity">
+                            <div class="ticket__price">
+                                <span class="ticket__price__costs">3 500 Ft</span>
+                            </div>
+                            <div class="ticket__quantity ">
+                                <input min="0" pattern="^[1-9]\d*$" autocomplete="off" class="ticket__quantityfield" aria-describedby="ticket__description-02" id="conference-2017-1-ticket-02" name="registration[release_ids][02]" placeholder="0" type="number">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="formactions">
+                <div class="formactions__action">
+                    <button class="button alert" type="submit" value="submit">Tovább</button>
+                </div>
+                <div class="formactions__instruction">
+                    <p>Sétautalvánnyal történő ingyenes vásárlásról a későbbiekben fogsz nyilatkozni</p>
                 </div>
             </div>
-        </li>
-        <li class="ticket" id="ticket-02">
-            <div class="ticket__namewrap">
-                <label class="ticket__name" for="conference-2017-1-ticket-02">
-                    Normál/Felnőtt
-                </label>
-            </div>
-            <div class="ticket__pricequantitywrap">
-                <div class="ticket__pricequantity">
-                    <div class="ticket__price">
-                        <span class="ticket__price__costs">3 500 Ft</span>
-                    </div>
-                    <div class="ticket__quantity ">
-                        <input min="0" pattern="^[1-9]\d*$" autocomplete="off" class="ticket__quantityfield" aria-describedby="ticket__description-02" id="conference-2017-1-ticket-02" name="registration[release_ids][02]" placeholder="0" type="number">
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <div class="formactions">
-        <div class="formactions__action">
-            <button class="button large alert" type="submit" value="Submit">Tovább</button>
-        </div>
-        <div class="formactions__branding">
-            <p class="normaltext"> </p>
-        </div>
+        </form>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+        </button>
     </div>
-</form>
-<button class="close-button" data-close aria-label="Close event filter" type="button">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
+</aside>

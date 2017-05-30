@@ -196,6 +196,7 @@
 }
 
 .walk__globalquote {
+  text-align: right;
   padding: 0;
   &, & p {
   }
@@ -204,7 +205,6 @@
 .walk__lead {
   font-size: 1.125rem;
   font-weight: $global-weight-bold;
-
 
   @include breakpoint('tablet') {
     font-size: 1.333rem;
@@ -215,4 +215,10 @@
   p {
     margin-bottom: 0;
   }
+}
+
+
+.walk__quote {
+  text-align: right;
+  padding:0;
 }
