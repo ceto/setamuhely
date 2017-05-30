@@ -6,9 +6,10 @@
   font-weight: $global-weight-bold;
   font-size: .875rem;
   margin:0 0 .75em 0;
-  text-transform: capitalize;
+  //text-transform: capitalize;
   display: inline-block;
   line-height: 1.2;
+  //color:$primary-color;
 
   span {
     font-style: italic;
@@ -57,8 +58,8 @@
 .walk__banner {
   @include clearfix();
   position: relative;
-  //background-color: $warning-color;
-  background-color: $medium-gray;
+  background-color: $warning-color;
+  background-color: $extralight-gray;
 }
 
 .walk__banner__one {
@@ -112,6 +113,7 @@
 
 .walk__events {
   padding:1.5rem 0;
+    box-shadow: inset 0 0 3px 0 rgba(#000,.075);
   @include breakpoint('large') {
     padding: 2vw 0;
   }
@@ -181,7 +183,10 @@
 .walk__extras--list {
   p {
     //font-size: 1.125rem;
-    text-transform: capitalize;
+    text-transform: lowercase;
+    span::first-letter {
+      text-transform: uppercase;
+    }
   }
 }
 .walk__loc__maplink {
@@ -197,7 +202,7 @@
 }
 
 .walk__lead {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: $global-weight-bold;
 
 
