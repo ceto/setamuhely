@@ -111,7 +111,7 @@
     overflow-x: visible;
     overflow-y: inherit;
     word-wrap: normal;
-    padding: 0 0 0;
+    padding: 0 map-get($grid-column-gutter,large)/4;
   }
 }
 
@@ -137,6 +137,6 @@
       display: flex;
       width: 33.333%;
       margin:map-get($grid-column-gutter,large)/2 0;
-      padding:0 map-get($grid-column-gutter,large)/2;
+      padding:0 map-get($grid-column-gutter,large)/4;
     }
 }

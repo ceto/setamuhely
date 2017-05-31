@@ -1,5 +1,43 @@
 .sitefooter {
-  background-color: $extralight-gray;
   font-size: .875rem;
-  border-top: 1px solid $light-gray;
+  margin-top: 4rem;
+    border-top: 1px solid $light-gray;
+}
+.sitefooter__great {
+
+}
+.sitefooter__small {
+  margin-top: 4rem;
+}
+.ficonblock {
+  //margin-top: 1rem;
+}
+.socialnav {
+  //float:right;
+}
+
+.fbarionlink {
+  //float:left;
+}
+
+.csimpi {
+
+  //max-width: rem-calc(340);
+  .input-group {
+    margin-bottom: .5rem;
+  }
+   [type='email'] {
+    border-color: $dark-gray;
+    border-width: 1px;
+    background-color: #fff;
+   }
+  .button {
+    background-color: $dark-gray;
+    &:hover, &:focus {
+      background-color: $alert-color;
+    }
+  }
+  p {
+    //font-weight: $global-weight-bold;
+  }
 }

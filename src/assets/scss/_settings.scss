@@ -98,7 +98,7 @@ $breakpoint-classes: (small medium tablet large xlarge);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 20px,
+  small: 24px,
   medium: 30px,
   large: 40px
 );
@@ -367,7 +367,7 @@ $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 3px solid $body-font-color;
 $input-prefix-padding: 1rem;
-$form-label-color: $black;
+$form-label-color: $body-font-color;
 $form-label-font-size: rem-calc(14);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
@@ -390,7 +390,7 @@ $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
 $input-radius: 6px;
-$form-button-radius: $button-radius;
+$form-button-radius: $input-radius;
 
 // 20. Label
 // ---------
@@ -503,8 +503,8 @@ $responsive-embed-ratios: (
 // ----------
 
 $reveal-background: $white;
-$reveal-width: 760px;
-$reveal-max-width: $global-width;
+$reveal-width: 780px;
+$reveal-max-width: 90%;
 $reveal-padding: $global-padding $global-padding;
 $reveal-border: 0px solid $medium-gray;
 $reveal-radius: $global-radius;

@@ -120,6 +120,7 @@
   letter-spacing: .05em;
   pointer-events: auto;
   line-height: 1;
+  font-size: .875rem;
 
   &:focus {
     color:inherit;
@@ -136,6 +137,9 @@
     color:$alert-color;
     margin-right:.333em;
     transform: scale(1.333) translateY(-.1em);
+  }
+  @include breakpoint(large) {
+    font-size: 1rem;
   }
 }
 

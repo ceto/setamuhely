@@ -4,38 +4,43 @@
   padding:0;
   > li {
     display: block;
-    margin:0 0 .75rem 0;
+    margin:0 0 $global-margin 0;
   }
 }
 .drivercard {
   @include clearfix();
   //padding:.75rem 0;
   max-width: 30rem;
-  background-color: $extralight-gray;
+  background-color: $white;
   border:1px solid $light-gray;
   &:hover {
+    background-color: #fff;
+
     .drivercard__photo {
-      border-color:$secondary-color;
     }
   }
 }
 
 .drivercard__photo {
-  border-left: .75rem solid $primary-color;
   display: block;
   float:left;
-  max-width: 28%;
-  margin-right: .75rem;
+  max-width: 20%;
+  margin-right: .875rem;
   img {
     display: block;
+  }
+  &:hover, &:focus {
   }
 }
 .drivercard__name {
   font-size: 1rem;
-  margin:1.25rem 0 .125em;
+  margin: 1em 0 .125em;
   font-family: $body-font-family;
   a {
     color:inherit;
+    &:hover,&:focus {
+      color:$primary-color;
+    }
   }
 }
 .drivercard__titulus {

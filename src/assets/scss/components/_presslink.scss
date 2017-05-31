@@ -2,7 +2,9 @@
   list-style-type: none;
   margin:0;
   padding:0;
+  counter-reset: press-counter;
   > li {
+    counter-increment: press-counter;
     display: block;
     margin:0;
     padding:0;
@@ -15,26 +17,30 @@
 .presslink {
   padding:.875rem 0 .5rem;
   //background-color: $medium-gray;
+
 }
 .presslink__title {
   font-family: $body-font-family;
   font-size: 1rem;
   margin:0;
   padding:0;
+  &:before {
+      content: counter(press-counter) '. ';
+  }
   a {
+
     color:inherit;
-    &:before {
-      content:'### ';
-    }
     &:hover, &:focus {
-      color:$alert-color;
+      //color:inherit;
+      color:$secondary-color;
+      //text-decoration: underline;
     }
   }
 }
 .presslink__src {
   font-size: .875rem;
   //font-weight: $global-weight-bold;
-  margin:0;
+  margin:0 0 0 0rem;
 }
 .presslink__src__medium {
   //font-weight: $global-weight-bold;
@@ -42,5 +48,7 @@
 .presslink__src__date {
   &:before {
     content: ' | ';
+    //font-weight: $global-weight-bold;
+    //color:$alert-color;
   }
 }

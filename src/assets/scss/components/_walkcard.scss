@@ -58,12 +58,12 @@
 }
 
 .walkcard__title {
-  font-size: 1rem;
+  font-size: .875rem;
   margin:0 0 .25em;
   text-transform: uppercase;
   font-family: $body-font-family;
-  @include breakpoint(xlarge) {
-    //font-size: 1.333rem;
+  @include breakpoint(large) {
+    font-size: 1rem;
   }
   a {
     color:inherit;
@@ -74,11 +74,15 @@
 }
 .walkcard__subtitle {
   font-family: $body-font-family;
-  font-size: 1rem;
+  font-size: .875rem;
   //color:$secondary-color;
   margin: 0 0;
+  @include breakpoint(large) {
+    font-size: 1rem;
+  }
 }
 .walkcard__body {
+  padding:0 0;
 
   @include breakpoint(medium) {
       min-height: 7rem;

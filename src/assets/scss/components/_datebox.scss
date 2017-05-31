@@ -9,6 +9,7 @@
   color:$white;
   &:hover {
     background-color: $anchor-color-hover;
+    //box-shadow: 0 0 .125rem 0 rgba(#000,.5);
   }
 }
 .datebox--secondary  {
